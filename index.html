@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Basico -->
+    <title>Zakowicz Osvaldo - Analista en Sistemas y Desarrollador Full Stack</title>
+    <meta name="description" content="Portfolio de Zakowicz Osvaldo Emanuel, analista en sistemas y desarrollador full stack especializado en Laravel, PHP 8, JavaScript y Docker. Soluciones digitales eficientes.">
+    <meta name="keywords" content="analista sistemas, desarrollador fullstack, Laravel, PHP 8, JavaScript, Docker, portfolio desarrollador">
+    <meta name="author" content="Zakowicz Osvaldo Emanuel">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+</head>
+
+<body>
+
+    <!-- Skip links para navegacion por teclado -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#contact" class="skip-link">Saltar al contacto</a>
+
+    <!-- seccion cabecera -->
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- contenido principal -->
+    <main id="main-content" role="main">
+
+        <!-- sobre mi -->
+        <section id="about" aria-labelledby="main-title">
+
+            <!-- biografia -->
+            <article aria-describedby="main-description">
+                <p>¡hola!, soy</p>
+                <h1 id="main-title">zakowicz osvaldo emanuel</h1>
+                <h2>analista en sistemas & desarrollador full stack</h2>
+                <p id="main-description">En constante crecimiento hacia la especialización en desarrollo full stack y análisis de sistemas. Mi
+                    objetivo es crear soluciones digitales eficientes que impulsen el crecimiento de empresas y negocios,
+                    aplicando buenas prácticas de programación y arquitectura de software limpia.</p>
+            </article>
+
+            <!-- stack tecnologico -->
+            <article aria-labelledby="tech-stack-title">
+                <h3 id="tech-stack-title">stack tecnológico:</h3>
+                <ul role="list">
+                    <li>laravel</li>
+                    <li>php 8</li>
+                    <li>javascript</li>
+                    <li>docker</li>
+                    <li>html5</li>
+                    <li>css3</li>
+                    <li>linux</li>
+                    <li>uml</li>
+                </ul>
+            </article>
+
+            <!-- actualmente aprendiendo -->
+            <article aria-labelledby="tech-stack-in-learning-title">
+                <h3 id="tech-stack-in-learning-title">actualmente aprendiendo:</h3>
+                <ul role="list">
+                    <li>livewire</li>
+                    <li>uml</li>
+                </ul>
+            </article>
+
+            <!-- cta -->
+            <nav aria-label="navegacion rapida">
+                <a href="#projects" class="cta-button">proyectos</a>
+                <a href="#contact" class="cta-button">contáctame</a>
+            </nav>
+        </section>
+    </main>
+
+    <!-- seccion proyectos -->
+    <section id="projects" aria-labelledby="projects-title">
+        <h3 id="projects-title">mis proyectos</h3>
+    </section>
+
+    <!-- seccion contacto -->
+    <section id="contact" aria-labelledby="contact-title">
+        <h3 id="contact-title">contáctame y trabajemos juntos</h3>
+
+        <!-- enlaces de contacto, recursos y otra informacion -->
+        <aside aria-labelledby="contact-info-title">
+            <h3 id="contact-info-title">información de contacto</h3>
+
+            <address>
+                <!-- linkedin -->
+                <div class="contact-item">
+                    <span class="icon" aria-hidden="true">💼</span>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p><a href="#" aria-label="Conectar en LinkedIn con Zakowicz Osvaldo">Conectemos profesionalmente</a></p>
+                    </div>
+                </div>
+                <!-- github -->
+                <div class="contact-item">
+                    <span class="icon" aria-hidden="true">:D</span>
+                    <div>
+                        <h4>github</h4>
+                        <p><a href="#" aria-label="Revisar proyectos de Zakowicz Osvaldo en GitHub">revisa mis proyectos y código</a></p>
+                    </div>
+                </div>
+                <!-- codepen -->
+                <div class="contact-item">
+                    <span class="icon" aria-hidden="true">:D</span>
+                    <div>
+                        <h4>codepen</h4>
+                        <p><a href="#" aria-label="Ver ejemplos de codigo frontend de Zakowicz Osvaldo en Codepen">ve mis ejemplos frontend</a></p>
+                    </div>
+                </div>
+                <!-- ubicacion -->
+                <div class="contact-item">
+                    <span class="icon" aria-hidden="true">📍</span>
+                    <div>
+                        <h4>Ubicación</h4>
+                        <p>Apóstoles, Misiones, Argentina</p>
+                    </div>
+                </div>
+                <!-- disponibilidad-->
+                <div class="contact-item">
+                    <span class="icon" aria-hidden="true">⏰</span>
+                    <div>
+                        <h4>Disponibilidad</h4>
+                        <p><time>Lun - Vie: 9:00 - 18:00 (GMT-3)</time></p>
+                    </div>
+                </div>
+            </address>
+        </aside>
+        <!-- formulario de contacto -->
+        <section aria-labelledby="contact-form-title">
+            <h3 id="contact-form-title">envíame un mensaje</h3>
+
+            <form action="#" method="POST" id="contact-form" novalidate>
+                <fieldset>
+                    <legend class="sr-only">Datos de contacto</legend>
+                    
+                    <div class="field-group">
+                        <label for="name">Tu nombre *</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            aria-required="true"
+                            aria-describedby="name-error"
+                            required
+                            maxlength="100"
+                            aria-invalid="false"
+                        />
+                        <div id="name-error" class="error-message" aria-live="polite"></div>
+                    </div>
+                    
+                    <div class="field-group">
+                        <label for="email">Tu correo electrónico *</label>
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email"
+                            aria-required="true"
+                            aria-describedby="email-error"
+                            required
+                            maxlength="150"
+                            aria-invalid="false"
+                        />
+                        <div id="email-error" class="error-message" aria-live="polite"></div>
+                    </div>
+                    
+                    <div class="field-group">
+                        <label for="subject">Asunto *</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            aria-required="true"
+                            aria-describedby="subject-error"
+                            required
+                            maxlength="100"
+                            aria-invalid="false"
+                        />
+                        <div id="subject-error" class="error-message" aria-live="polite"></div>
+                    </div>
+                    
+                    <div class="field-group">
+                        <label for="message">Mensaje *</label>
+                        <textarea 
+                            name="message"
+                            id="message"
+                            cols="30"
+                            rows="5"
+                            placeholder="Cuéntame sobre tu proyecto o consulta"
+                            aria-required="true"
+                            aria-describedby="message-help message-error"
+                            required
+                            maxlength="500"
+                            aria-invalid="false">
+                        </textarea>
+                        <div id="message-help" class="help-text">Máximo 500 caracteres</div>
+                        <div id="message-error" class="error-message" aria-live="polite"></div>
+                    </div>
+                    
+                    <button type="submit" aria-describedby="submit-help">
+                        Enviar Mensaje
+                    </button>
+                    <div id="submit-help" class="help-text">
+                        Te responderé dentro de las próximas 24 horas
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </section>
+
+    <!-- seccion final -->
+    <footer role="contentinfo">
+        <p>copy</p>
+    </footer>
+</body>
+
+</html>
