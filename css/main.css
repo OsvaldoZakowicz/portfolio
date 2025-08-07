@@ -1,6 +1,120 @@
+:root {
+    --main-background: #282828;
+    --alt-background: #1D2021;
+    --main-text: #EBDBB2;
+    --alt-text: #3C3836;
+    --yellow: #FABD2F;
+    --blue: #83A598;
+    --orange: #FE8019;
+    --green: #8EC07C;
+    --purple: #B16286;
+    --shadow: #3C3836;
+    --border: #504945;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    /* altura minima de viewport */
+    min-height: 100vh;
+    /* establecer el alto de la linea */
+    line-height: 1.6;
+    /* establece la separacion de caracteres general */
+    letter-spacing: 1px;
+    /* establecemos el color de la fuente general */
+    color: var(--main-text);
+    /* establecer el color del fondo general */
+    background-color: var(--main-background);
+    /* contenedor flexible*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section {
+    background-color: var(--alt-background);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    padding: 3rem 2.5rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    /*TODO: animacion */
+}
+
+.greetings {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 1rem;
+}
+
+.profession {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.capitalized-shadow {
+    text-shadow: 2px 2px 0 var(--shadow);
+    text-transform: capitalize;
+}
+
+.bio {
+    margin-bottom: 2rem;
+}
+
+/* texto destacado */
+.outstanding {
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--purple);
+}
+
+.tech-stack h3 {
+    margin-bottom: 1rem;
+}
+
+.tech-stack .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1rem;
+    list-style: none;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.tech-stack .tech-list .tech-tag {
+    background-color: var(--main-background);
+    border: 1px solid var(--border);
+    color: var(--main-text);
+    padding: 0.5rem 0.8rem;
+}
+
+.tech-stack .tech-list .tech-tag::before {
+    content: '>';
+    color: var(--green);
+    font-weight: 700;
+    margin-right: 0.3rem;
 }
