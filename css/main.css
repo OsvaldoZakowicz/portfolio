@@ -35,11 +35,11 @@ body {
     /* establecer el color del fondo general */
     background-color: var(--color-main-background);
 
-    /* contenedor flexible*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 2rem;
 }
 
 main {
@@ -48,7 +48,8 @@ main {
     align-items: center;
 }
 
-.hero-section {
+/* cada caja de contenido */
+.container {
     background-color: var(--color-alt-background);
     border: 1px solid var(--color-border);
     border-radius: 0;
@@ -56,6 +57,9 @@ main {
     max-width: 800px;
     width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section {
     text-align: center;
     /*TODO: animacion */
 }
@@ -94,8 +98,13 @@ main {
     border-left: 2px solid var(--color-purple);
 }
 
-.tech-stack h3 {
+h3, h4 {
     margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.tech-stack {
+    margin-bottom: 2rem;
 }
 
 .tech-stack .tech-list {
