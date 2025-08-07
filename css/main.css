@@ -1,15 +1,15 @@
 :root {
-    --main-background: #282828;
-    --alt-background: #1D2021;
-    --main-text: #EBDBB2;
-    --alt-text: #3C3836;
-    --yellow: #FABD2F;
-    --blue: #83A598;
-    --orange: #FE8019;
-    --green: #8EC07C;
-    --purple: #B16286;
-    --shadow: #3C3836;
-    --border: #504945;
+    --color-main-background: #282828;
+    --color-alt-background: #1D2021;
+    --color-main-text: #EBDBB2;
+    --color-alt-text: #3C3836;
+    --color-yellow: #FABD2F;
+    --color-blue: #83A598;
+    --color-orange: #FE8019;
+    --color-green: #8EC07C;
+    --color-purple: #B16286;
+    --color-shadow: #3C3836;
+    --color-border: #504945;
 }
 
 * {
@@ -22,14 +22,19 @@
 body {
     /* altura minima de viewport */
     min-height: 100vh;
+    
     /* establecer el alto de la linea */
     line-height: 1.6;
+
     /* establece la separacion de caracteres general */
     letter-spacing: 1px;
+
     /* establecemos el color de la fuente general */
-    color: var(--main-text);
+    color: var(--color-main-text);
+
     /* establecer el color del fondo general */
-    background-color: var(--main-background);
+    background-color: var(--color-main-background);
+
     /* contenedor flexible*/
     display: flex;
     flex-direction: column;
@@ -44,8 +49,8 @@ main {
 }
 
 .hero-section {
-    background-color: var(--alt-background);
-    border: 1px solid var(--border);
+    background-color: var(--color-alt-background);
+    border: 1px solid var(--color-border);
     border-radius: 0;
     padding: 3rem 2.5rem;
     max-width: 800px;
@@ -57,14 +62,14 @@ main {
 
 .greetings {
     font-size: 1.1rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin-bottom: 2rem;
 }
 
 .name {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--yellow);
+    color: var(--color-yellow);
     margin-bottom: 1rem;
 }
 
@@ -75,7 +80,7 @@ main {
 }
 
 .capitalized-shadow {
-    text-shadow: 2px 2px 0 var(--shadow);
+    text-shadow: 2px 2px 0 var(--color-shadow);
     text-transform: capitalize;
 }
 
@@ -86,7 +91,7 @@ main {
 /* texto destacado */
 .outstanding {
     padding-left: 0.5rem;
-    border-left: 2px solid var(--purple);
+    border-left: 2px solid var(--color-purple);
 }
 
 .tech-stack h3 {
@@ -105,16 +110,11 @@ main {
     list-style-position: inside;
 }
 
-.tech-stack .tech-list .tech-tag {
-    background-color: var(--main-background);
-    border: 1px solid var(--border);
-    color: var(--main-text);
-    padding: 0.5rem 0.8rem;
-}
-
-.tech-stack .tech-list .tech-tag::before {
-    content: '>';
-    color: var(--green);
-    font-weight: 700;
-    margin-right: 0.3rem;
+.cta-section {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
