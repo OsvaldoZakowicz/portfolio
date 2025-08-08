@@ -64,6 +64,7 @@ ul {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* cada caja de contenido */
@@ -82,6 +83,13 @@ ul {
     /*TODO: animacion */
 }
 
+.image-wrapper img {
+    width: 250px;
+    height: 250px;
+    border: 6px solid var(--color-border);
+    border-radius: 100%;
+}
+
 .name {
     font-size: 2.5rem;
     font-weight: 700;
@@ -90,9 +98,10 @@ ul {
 }
 
 .profession {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 2rem;
+    color: var(--color-blue);
 }
 
 .capitalized-shadow {
