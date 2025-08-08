@@ -48,6 +48,24 @@ main {
     align-items: center;
 }
 
+h3, h4 {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 /* cada caja de contenido */
 .container {
     background-color: var(--color-alt-background);
@@ -98,11 +116,6 @@ main {
     border-left: 2px solid var(--color-purple);
 }
 
-h3, h4 {
-    margin-bottom: 1rem;
-    text-transform: capitalize;
-}
-
 .tech-stack {
     margin-bottom: 2rem;
 }
@@ -114,9 +127,6 @@ h3, h4 {
     align-items: center;
     gap: 5px;
     margin-bottom: 1rem;
-    list-style: none;
-    list-style-type: none;
-    list-style-position: inside;
 }
 
 .cta-section {

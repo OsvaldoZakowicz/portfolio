@@ -53,3 +53,16 @@
     transform: translateY(-2px);
     box-shadow: 4px 4px 0px var(--color-orange);
 }
+
+.link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-main-text);
+    padding-bottom: 1rem;
+}
+
+.link:hover {
+    color: var(--color-green);
+    border-bottom: 2px solid var(--color-green);
+}
+
