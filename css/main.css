@@ -1,8 +1,7 @@
 :root {
+    /* colores de fondo, sombras, bordes */
     --color-main-background: #282828;
     --color-alt-background: #1D2021;
-    --color-main-text: #EBDBB2;
-    --color-alt-text: #3C3836;
     --color-yellow: #FABD2F;
     --color-blue: #83A598;
     --color-orange: #FE8019;
@@ -10,6 +9,12 @@
     --color-purple: #B16286;
     --color-shadow: #3C3836;
     --color-border: #504945;
+    
+    /* colores del texto */
+    --color-main-text: #EBDBB2;
+    --color-alt-text: #3C3836;
+    --color-main-green-text: #8EC07C;
+    --color-alt-green-text: #B8BB26;
 }
 
 * {
@@ -51,6 +56,14 @@ main {
 h3, h4 {
     margin-bottom: 1rem;
     text-transform: capitalize;
+}
+
+h4::first-letter {
+    text-transform: uppercase;
+}
+
+p::first-letter {
+    text-transform: uppercase;
 }
 
 ul {
@@ -157,4 +170,40 @@ ul {
 
 .contact-section .contact-info-wrapper, .contact-form-wrapper h4 {
     margin-bottom: 1rem;
+}
+
+.contact-section .contact-info-wrapper, .contact-form-wrapper p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* bloque con informacion de contacto */
+.contact-section .contact-info-wrapper address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-section .contact-info-wrapper .contact-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    text-align: start;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    background-color: var(--color-main-background);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+}
+
+.contact-section .contact-info-wrapper .contact-item:hover {
+    border-color: var(--color-green);
+    transform: translateX(4px);
+}
+
+.contact-section .contact-info-wrapper .contact-item span {
+    font-size: 1.5rem;
 }

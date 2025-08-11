@@ -66,3 +66,13 @@
     border-bottom: 2px solid var(--color-green);
 }
 
+.link-secondary {
+    color: var(--color-main-green-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link-secondary:hover {
+    color: var(--color-alt-green-text);
+    text-decoration: underline;
+}
