@@ -76,3 +76,52 @@
     color: var(--color-alt-green-text);
     text-decoration: underline;
 }
+
+/* grupo label + input o textarea */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.field-group label {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.field-group label::first-letter {
+    text-transform: uppercase;
+}
+
+.field-group label span{
+    color: var(--color-purple);
+}
+
+.field-group input, textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    background-color: var(--color-main-background);
+    border: 1px solid var(--color-border);
+    color: var(--color-main-text);
+}
+
+.field-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+}
+
+.field-group input:focus, textarea:focus {
+    border-radius: 0;
+    border-color: var(--color-main-text);
+}
+
+/* focus al navegar por teclado */
+.field-group input:focus-visible, textarea:focus-visible {
+    border-radius: 0;
+    border-color: var(--color-blue);
+}

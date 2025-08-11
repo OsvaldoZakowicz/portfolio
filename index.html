@@ -183,7 +183,7 @@
                     <legend class="sr-only">Datos de contacto</legend>
                     
                     <div class="field-group">
-                        <label for="name">Tu nombre *</label>
+                        <label for="name">tu nombre<span>*</span></label>
                         <input
                             type="text"
                             id="name"
@@ -198,7 +198,7 @@
                     </div>
                     
                     <div class="field-group">
-                        <label for="email">Tu correo electrónico *</label>
+                        <label for="email">tu correo electrónico<span>*</span></label>
                         <input 
                             type="email"
                             id="email"
@@ -213,7 +213,7 @@
                     </div>
                     
                     <div class="field-group">
-                        <label for="subject">Asunto *</label>
+                        <label for="subject">asunto<span>*</span></label>
                         <input
                             type="text"
                             id="subject"
@@ -228,7 +228,7 @@
                     </div>
                     
                     <div class="field-group">
-                        <label for="message">Mensaje *</label>
+                        <label for="message">mensaje<span>*</span></label>
                         <textarea 
                             name="message"
                             id="message"
@@ -239,18 +239,14 @@
                             aria-describedby="message-help message-error"
                             required
                             maxlength="500"
-                            aria-invalid="false">
-                        </textarea>
-                        <div id="message-help" class="help-text">Máximo 500 caracteres</div>
+                            aria-invalid="false"></textarea>
+                        <div id="message-help" class="help-text">máximo 500 caracteres</div>
                         <div id="message-error" class="error-message" aria-live="polite"></div>
                     </div>
                     
-                    <button type="submit" aria-describedby="submit-help">
-                        Enviar Mensaje
+                    <button type="submit" class="button button-secondary" aria-describedby="submit-help">
+                        Enviar
                     </button>
-                    <div id="submit-help" class="help-text">
-                        Te responderé dentro de las próximas 24 horas
-                    </div>
                 </fieldset>
             </form>
         </section>
