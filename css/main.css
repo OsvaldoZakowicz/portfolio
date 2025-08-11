@@ -9,6 +9,7 @@
     --color-purple: #B16286;
     --color-shadow: #3C3836;
     --color-border: #504945;
+    --color-alt-border: #665C54;
 
     /* colores del texto */
     --color-main-text: #EBDBB2;
@@ -17,6 +18,7 @@
     --color-alt-sub-text: #665C54;
     --color-main-green-text: #8EC07C;
     --color-alt-green-text: #B8BB26;
+    --color-main-blue-text: #83A598;
 }
 
 * {
@@ -154,6 +156,19 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+}
+
+.projects-section {
+   text-align: center;
+}
+
+.projects-section .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .contact-section {
