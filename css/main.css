@@ -9,10 +9,12 @@
     --color-purple: #B16286;
     --color-shadow: #3C3836;
     --color-border: #504945;
-    
+
     /* colores del texto */
     --color-main-text: #EBDBB2;
     --color-alt-text: #3C3836;
+    --color-alt-fade-text: #A89984;
+    --color-alt-sub-text: #665C54;
     --color-main-green-text: #8EC07C;
     --color-alt-green-text: #B8BB26;
 }
@@ -27,7 +29,7 @@
 body {
     /* altura minima de viewport */
     min-height: 100vh;
-    
+
     /* establecer el alto de la linea */
     line-height: 1.6;
 
@@ -167,17 +169,20 @@ ul {
     margin-bottom: 2rem;
 }
 
-.contact-section .contact-info-wrapper, .contact-form-wrapper {
+.contact-section .contact-info-wrapper,
+.contact-form-wrapper {
     border: 1px solid var(--color-border);
     border-radius: 0;
     padding: 3rem 1rem;
 }
 
-.contact-section .contact-info-wrapper h4, .contact-form-wrapper h4 {
+.contact-section .contact-info-wrapper h4,
+.contact-form-wrapper h4 {
     margin-bottom: 5px;
 }
 
-.contact-section .contact-info-wrapper p, .contact-form-wrapper p {
+.contact-section .contact-info-wrapper p,
+.contact-form-wrapper p {
     font-size: 0.8rem;
     font-weight: 300;
 }
@@ -222,6 +227,29 @@ ul {
 }
 
 /* formulario de contacto */
-.contact-section .contact-form-wrapper form fieldset{
+.contact-section .contact-form-wrapper form fieldset {
     border: none;
+}
+
+/* footer */
+.footer-content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 1rem;
+    color: var(--color-main-text);
+    margin-bottom: 0.5rem;
+}
+
+.copyright::before {
+    content: '> ';
+    color: var(--color-green);
+    font-weight: bold;
+}
+
+.credits {
+    font-size: 0.9rem;
+    color: var(--color-alt-fade-text);
 }

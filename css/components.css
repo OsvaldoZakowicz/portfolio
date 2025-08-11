@@ -125,3 +125,31 @@
     border-radius: 0;
     border-color: var(--color-blue);
 }
+
+/* footer */
+.credits-link {
+    color: var(--color-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.credits-link:hover {
+    color: var(--color-yellow);
+    text-decoration: underline;
+}
+
+.footer-divider {
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-purple);
+    margin: 1rem auto;
+}
+
+.fun-fact {
+    font-size: 0.8rem;
+    color: var(--color-alt-sub-text);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
