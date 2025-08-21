@@ -77,6 +77,18 @@
     text-decoration: underline;
 }
 
+.main-link {
+    color: var(--color-alt-green-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.main-link:hover {
+    color: var(--color-main-text);
+    text-decoration: underline;
+}
+
 /* cards -----------------------------------------------------------*/
 .project-card {
     position: relative; /* necesario para el card badge*/

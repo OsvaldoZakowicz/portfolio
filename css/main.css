@@ -121,6 +121,25 @@ ul {
     color: var(--color-blue);
 }
 
+.education {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: var(--color-main-green-text);
+}
+
+.education::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    margin-left: 5px;
+    background-image: url('/assets/svg/flag-for-flag-argentina-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle; /* Opcional: para alinear con el texto */
+}
+
 .capitalized-shadow {
     text-shadow: 2px 2px 0 var(--color-shadow);
     text-transform: capitalize;
