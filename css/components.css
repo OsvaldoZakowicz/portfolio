@@ -79,6 +79,7 @@
 
 /* cards -----------------------------------------------------------*/
 .project-card {
+    position: relative; /* necesario para el card badge*/
     width: 320px;
     height: auto;
     display: flex;
@@ -89,6 +90,36 @@
     border-radius: 0;
     transition: all 0.2s ease;
     text-align: start;
+}
+
+/* componente de card especial destacado */
+.project-card__badge {
+    position: absolute;
+    top: 2rem;
+    left: -2.7rem;
+    padding: 0.3rem 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: rotate(-45deg);
+    box-shadow: 2px 2px 0 var(--color-shadow);
+    z-index: 50;
+    cursor: help;
+}
+
+.project-card__badge--featured {
+    background-color: var(--color-yellow);
+    color: var(--color-alt-text);
+}
+
+.project-card__badge--new {
+    background-color: var(--color-green);
+    color: var(--color-alt-text);
+}
+
+.project-card__badge--beta {
+    background-color: var(--color-blue);
+    color: var(--color-alt-text);
 }
 
 .project-card:hover {
@@ -155,7 +186,7 @@
 }
 
 .card-description {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--color-main-text);
     line-height: 1.4;
     margin-bottom: 1rem;
