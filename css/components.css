@@ -92,7 +92,7 @@
 /* cards -----------------------------------------------------------*/
 .project-card {
     position: relative; /* necesario para el card badge*/
-    width: 320px;
+    width: 250px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -102,6 +102,12 @@
     border-radius: 0;
     transition: all 0.2s ease;
     text-align: start;
+}
+
+@media (min-width: 576px) {
+    .project-card {
+        width: 320px;
+    }
 }
 
 /* componente de card especial destacado */
@@ -255,7 +261,8 @@
     text-transform: uppercase;
 }
 
-.field-group label span {
+.field-group label::after {
+    content: '*';
     color: var(--color-purple);
 }
 
