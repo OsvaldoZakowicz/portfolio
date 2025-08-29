@@ -240,7 +240,22 @@
         <section class="contact-form-wrapper" aria-labelledby="contact-form-title">
             <h3 id="contact-form-title">envíame un mensaje</h3>
 
-            <form action="#" method="POST" id="contact-form" novalidate>
+            <!-- formulario configurado para deploy en netlify -->
+
+            <form
+                name="contact" 
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                action="#"
+                novalidate
+                id="contact-form" 
+            >
+                <input type="hidden" name="form-name" value="contact" />
+                <div style="display: none">
+                    <label>No llenes este campo si eres humano: <input name="bot-field" /></label>
+                </div>
+
                 <fieldset>
                     <legend class="sr-only">Datos de contacto</legend>
                     
