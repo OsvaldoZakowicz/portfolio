@@ -19,6 +19,7 @@
     --color-main-green-text: #8EC07C;
     --color-alt-green-text: #B8BB26;
     --color-main-blue-text: #83A598;
+    --color-main-red-text: #D62828;
 }
 
 * {
@@ -218,7 +219,7 @@ ul {
     }
 }
 
-
+/** -- seccion contacto ------------------------------------------*/
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -293,7 +294,7 @@ ul {
     border: none;
 }
 
-/* footer */
+/** -- seccion footer ----------------------------------------------- */
 .footer-content {
     margin: 0 auto;
     text-align: center;
@@ -314,4 +315,53 @@ ul {
 .credits {
     font-size: 0.9rem;
     color: var(--color-alt-fade-text);
+}
+
+/** -- pagina de exito o error de contacto --------------------------*/
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.message-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-main-blue-text);
+}
+
+.message-title--alt {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-main-red-text);
+}
+
+.message-text {
+    font-size: 0.9rem;
+}
+
+.message-link {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-main-green-text);
+}
+
+.message-link--alt {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-main-blue-text);
+}
+
+.message-link:hover {
+    text-decoration: underline;
+    color: var(--color-alt-green-text);
+}
+
+.message-link--alt:hover {
+    text-decoration: underline;
+    color: var(--color-alt-green-text);
 }
