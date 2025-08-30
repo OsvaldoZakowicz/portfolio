@@ -247,7 +247,15 @@
                 method="POST"
                 action="/success.html"
                 data-netlify="true"
+                netlify-honeypot="bot-field"
                 id="contact-form">
+
+                <p class="hidden">
+                    <label>
+                        No completes esto si eres humano: <input name="bot-field" type="text" />
+                    </label>
+                </p>
+
                 <fieldset>
                     <legend class="sr-only">Datos de contacto</legend>
                     

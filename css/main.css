@@ -83,6 +83,13 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* elemento oculto */
+.hidden {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
 @media (min-width: 576px) {
     .container {
         padding: 3rem 2.5rem;
