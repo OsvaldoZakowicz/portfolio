@@ -2,325 +2,346 @@
 
 /* tags del stack tecnologico */
 .tech-tag {
-    padding: 0.5rem 0.8rem;
-    background-color: var(--color-main-background);
-    border: 1px solid var(--color-border);
-    color: var(--color-main-text);
+  padding: 0.5rem 0.8rem;
+  background-color: var(--color-main-background);
+  border: 1px solid var(--color-border);
+  color: var(--color-main-text);
+  cursor: pointer;
 }
 
 .tech-tag::before {
-    content: '>';
-    color: var(--color-green);
-    font-weight: 700;
-    margin-right: 0.3rem;
+  content: '>';
+  color: var(--color-green);
+  font-weight: 700;
+  margin-right: 0.3rem;
 }
 
+/* items de la lista de trabajo y mejora */
+.tech-learning {
+  color: var(--color-blue);
+}
+
+.tech-learning::before {
+  content: '>';
+  color: var(--color-green);
+  font-weight: 700;
+  margin-right: 0.3rem;
+}
 
 .button {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    border: 2px solid;
-    border-radius: 0;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 2px solid;
+  border-radius: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .button-primary {
-    color: var(--color-alt-text);
-    background-color: var(--color-green);
-    border-color: var(--color-green);
+  color: var(--color-alt-text);
+  background-color: var(--color-green);
+  border-color: var(--color-green);
 }
 
 .button-primary:hover {
-    color: var(--color-green);
-    background-color: var(--color-alt-background);
-    transform: translateY(-2px);
-    box-shadow: 4px 4px 0px var(--color-green);
+  color: var(--color-green);
+  background-color: var(--color-alt-background);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px var(--color-green);
 }
 
 .button-secondary {
-    color: var(--color-alt-text);
-    background-color: var(--color-orange);
-    border-color: var(--color-orange);
+  color: var(--color-alt-text);
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
 }
 
 .button-secondary:hover {
-    color: var(--color-orange);
-    background-color: var(--color-alt-background);
-    transform: translateY(-2px);
-    box-shadow: 4px 4px 0px var(--color-orange);
+  color: var(--color-orange);
+  background-color: var(--color-alt-background);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px var(--color-orange);
 }
 
 .link {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--color-main-text);
-    padding-bottom: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-main-text);
+  padding-bottom: 1rem;
 }
 
 .link:hover {
-    color: var(--color-green);
-    border-bottom: 2px solid var(--color-green);
+  color: var(--color-green);
+  border-bottom: 2px solid var(--color-green);
 }
 
 .link-secondary {
-    color: var(--color-main-green-text);
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: var(--color-main-green-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .link-secondary:hover {
-    color: var(--color-alt-green-text);
-    text-decoration: underline;
+  color: var(--color-alt-green-text);
+  text-decoration: underline;
 }
 
 .main-link {
-    color: var(--color-alt-green-text);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    font-weight: 500;
+  color: var(--color-alt-green-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
 }
 
 .main-link:hover {
-    color: var(--color-main-text);
-    text-decoration: underline;
+  color: var(--color-main-text);
+  text-decoration: underline;
 }
 
 /* cards -----------------------------------------------------------*/
 .project-card {
-    position: relative; /* necesario para el card badge*/
-    width: 250px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: var(--color-main-background);
-    border: 2px solid var(--color-border);
-    border-radius: 0;
-    transition: all 0.2s ease;
-    text-align: start;
+  position: relative;
+  /* necesario para el card badge*/
+  width: 250px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-main-background);
+  border: 2px solid var(--color-border);
+  border-radius: 0;
+  transition: all 0.2s ease;
+  text-align: start;
 }
 
 @media (min-width: 576px) {
-    .project-card {
-        width: 320px;
-    }
+  .project-card {
+    width: 320px;
+  }
 }
 
 /* componente de card especial destacado */
 .project-card__badge {
-    position: absolute;
-    top: 2rem;
-    left: -3.5rem;
-    width: 200px;
-    padding: 0.3rem 2.5rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    transform: rotate(-45deg);
-    box-shadow: 2px 2px 0 var(--color-shadow);
-    z-index: 50;
-    cursor: help;
+  position: absolute;
+  top: 2rem;
+  left: -3.5rem;
+  width: 200px;
+  padding: 0.3rem 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  transform: rotate(-45deg);
+  box-shadow: 2px 2px 0 var(--color-shadow);
+  z-index: 50;
+  cursor: help;
 }
 
 .project-card__badge--featured {
-    background-color: var(--color-yellow);
-    color: var(--color-alt-text);
+  background-color: var(--color-yellow);
+  color: var(--color-alt-text);
 }
 
 .project-card__badge--new {
-    background-color: var(--color-green);
-    color: var(--color-alt-text);
+  background-color: var(--color-green);
+  color: var(--color-alt-text);
 }
 
 .project-card__badge--beta {
-    background-color: var(--color-blue);
-    color: var(--color-alt-text);
+  background-color: var(--color-blue);
+  color: var(--color-alt-text);
 }
 
 .project-card:hover {
-    border-color: var(--color-alt-border);
-    transform: translateY(-4px);
-    box-shadow: 4px 8px 0 var(--color-shadow);
+  border-color: var(--color-alt-border);
+  transform: translateY(-4px);
+  box-shadow: 4px 8px 0 var(--color-shadow);
 }
 
 .card-image {
-    width: 100%;
-    height: 192px;
-    flex-shrink: 0;
-    background-color: #3c3836;
-    border-bottom: 1px solid #504945;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 192px;
+  flex-shrink: 0;
+  background-color: #3c3836;
+  border-bottom: 1px solid #504945;
+  overflow: hidden;
+  position: relative;
 }
 
 .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover .card-image img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* en desarrollo, cuando no hay imagen */
 .card-placeholder {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #3c3836 25%, #504945 25%, #504945 50%, #3c3836 50%, #3c3836 75%, #504945 75%);
-    background-size: 20px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #665c54;
-    font-size: 0.8rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #3c3836 25%,
+    #504945 25%,
+    #504945 50%,
+    #3c3836 50%,
+    #3c3836 75%,
+    #504945 75%
+  );
+  background-size: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #665c54;
+  font-size: 0.8rem;
 }
 
 .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    padding: 1.5rem;
-    min-height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding: 1.5rem;
+  min-height: 128px;
 }
 
 .card-title {
-    font-size: 1.2rem;
-    line-height: 1.2;
-    color: var(--color-yellow);
-    font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: var(--color-yellow);
+  font-weight: 700;
 }
 
 .card-title::before {
-    content: '>';
-    color: var(--color-green);
-    font-weight: 700;
-    margin-right: 0.3rem;
+  content: '>';
+  color: var(--color-green);
+  font-weight: 700;
+  margin-right: 0.3rem;
 }
 
 .card-description {
-    font-size: 0.8rem;
-    color: var(--color-main-text);
-    line-height: 1.4;
-    margin-bottom: 1rem;
-    flex-grow: 1;
+  font-size: 0.8rem;
+  color: var(--color-main-text);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
 .card-link {
-    display: inline-block;
-    align-self: flex-start;
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-decoration: none;
-    color: var(--color-main-blue-text);
-    border: 1px solid var(--color-blue);
-    border-radius: 0;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--color-main-blue-text);
+  border: 1px solid var(--color-blue);
+  border-radius: 0;
 }
 
 .card-link:hover {
-    background-color: #83a598;
-    color: var(--color-alt-text);
-    transform: translateY(-2px);
-    box-shadow: 2px 4px 0px var(--color-shadow);
+  background-color: #83a598;
+  color: var(--color-alt-text);
+  transform: translateY(-2px);
+  box-shadow: 2px 4px 0px var(--color-shadow);
 }
 
 .card-link::after {
-    content: ' →';
-    transition: transform 0.2s ease;
+  content: ' →';
+  transition: transform 0.2s ease;
 }
 
 .card-link:hover::after {
-    transform: translateX(2px);
+  transform: translateX(2px);
 }
 
 /* form ----------------------------------------------------------- */
 /* grupo label + input o textarea */
 .field-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .field-group label {
-    font-size: 1rem;
-    font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .field-group label::first-letter {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .field-group label::after {
-    content: '*';
-    color: var(--color-purple);
+  content: '*';
+  color: var(--color-purple);
 }
 
 .field-group input,
 textarea {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    outline: none;
-    background-color: var(--color-main-background);
-    border: 1px solid var(--color-border);
-    color: var(--color-main-text);
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  background-color: var(--color-main-background);
+  border: 1px solid var(--color-border);
+  color: var(--color-main-text);
 }
 
 .field-group textarea {
-    resize: vertical;
-    min-height: 120px;
-    max-height: 300px;
+  resize: vertical;
+  min-height: 120px;
+  max-height: 300px;
 }
 
 .field-group input:focus,
 textarea:focus {
-    border-radius: 0;
-    border-color: var(--color-main-text);
+  border-radius: 0;
+  border-color: var(--color-main-text);
 }
 
 /* focus al navegar por teclado */
 .field-group input:focus-visible,
 textarea:focus-visible {
-    border-radius: 0;
-    border-color: var(--color-blue);
+  border-radius: 0;
+  border-color: var(--color-blue);
 }
 
 /* footer --------------------------------------------------------- */
 .credits-link {
-    color: var(--color-blue);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    font-weight: 500;
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
 }
 
 .credits-link:hover {
-    color: var(--color-yellow);
-    text-decoration: underline;
+  color: var(--color-yellow);
+  text-decoration: underline;
 }
 
 .footer-divider {
-    width: 60px;
-    height: 2px;
-    background-color: var(--color-purple);
-    margin: 1rem auto;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-purple);
+  margin: 1rem auto;
 }
 
 .fun-fact {
-    font-size: 0.8rem;
-    color: var(--color-alt-sub-text);
-    margin-top: 1rem;
-    font-style: italic;
+  font-size: 0.8rem;
+  color: var(--color-alt-sub-text);
+  margin-top: 1rem;
+  font-style: italic;
 }
