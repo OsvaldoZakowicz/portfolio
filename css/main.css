@@ -165,10 +165,6 @@ header .main-nav {
 
 /* ajuste especial telefonos en horizontal*/
 @media (min-width: 576px) {
-  .nav-overlay {
-    height: 25%;
-  }
-
   .main-nav ul {
     flex-direction: row;
     justify-content: space-evenly;
