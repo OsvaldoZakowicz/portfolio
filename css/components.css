@@ -28,6 +28,107 @@
   margin-right: 0.3rem;
 }
 
+/* toggle button class */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-main-text);
+  /* la transicion la usaremos despues para animar */
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* close button class */
+.nav-overlay__close {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  cursor: pointer;
+  /* el button necesita dimensiones fijas para que absolute funcione */
+  align-self: flex-end;
+  margin: 1rem;
+}
+
+.nav-overlay__close span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--color-main-text);
+  transition: all 0.3s ease;
+}
+
+.nav-overlay__close span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.nav-overlay__close span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* boton navegar arriba */
+.nav-top-btn {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background: var(--color-main-background);
+  border: 1px solid var(--color-border);
+  border-radius: 100%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  /* estado oculto: abajo fuera de vista */
+  transform: translateY(200px);
+  transition: transform 0.3s ease;
+}
+
+.nav-top-btn.is-active {
+  transform: translateY(0);
+}
+
+.nav-top-btn span {
+  display: block;
+  width: 12px;
+  height: 2px;
+  background-color: var(--color-main-text);
+}
+
+.nav-top-btn span:first-child {
+  transform: rotate(-45deg) translateX(3px);
+}
+
+.nav-top-btn span:last-child {
+  transform: rotate(45deg) translateX(-3px);
+}
+
 .button {
   display: inline-block;
   padding: 0.8rem 2rem;

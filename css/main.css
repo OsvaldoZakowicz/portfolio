@@ -97,6 +97,16 @@ ul {
 }
 
 /** -- seccion cabecera ------------------------*/
+header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.main-nav {
+  margin: 2rem 0;
+}
+
+/* bloque navegacion */
 .main-nav ul {
   display: flex;
   flex-direction: column;
@@ -106,12 +116,59 @@ ul {
   gap: 4rem;
 }
 
-/* telefonos en horizontal*/
+/* navegacion desktop */
+/* al principio no es visible */
+header .main-nav {
+  display: none;
+}
+
+/* pasados los 768px es visible */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .main-nav {
+    display: block;
+  }
+}
+
+/* menu mobile */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 50%;
+  background-color: #1d2021f3;
+  border-bottom: 2px solid var(--color-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  /* estado cerrado: arriba fuera de vista */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-overlay.is-open {
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .nav-overlay {
+    display: none;
+  }
+}
+
+/* ajuste especial telefonos en horizontal*/
 @media (min-width: 576px) {
   .main-nav ul {
     flex-direction: row;
-    gap: 2rem;
     justify-content: space-evenly;
+    gap: 2rem;
   }
 }
 
