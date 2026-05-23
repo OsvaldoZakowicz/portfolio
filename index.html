@@ -47,6 +47,7 @@
     <header class="container" role="banner">
       <!-- boton menu mobile -->
       <button
+        type="button"
         id="openMenu"
         class="nav-toggle"
         aria-expanded="false"
@@ -57,7 +58,7 @@
         <span></span>
       </button>
       <!-- menu desktop -->
-      <nav role="navigation" class="main-nav" aria-label="Navegación principal">
+      <nav role="navigation" class="main-nav" aria-label="Menú desktop">
         <ul>
           <li><a href="#about" class="link">sobre mí</a></li>
           <li><a href="#projects" class="link">mis proyectos</a></li>
@@ -74,6 +75,7 @@
       aria-label="Menu principal"
     >
       <button
+        type="button"
         id="closeMenu"
         class="nav-overlay__close"
         aria-label="Cerrar menú"
@@ -81,7 +83,11 @@
         <span></span>
         <span></span>
       </button>
-      <nav role="navigation" class="main-nav" aria-label="Navegación principal">
+      <nav
+        role="navigation"
+        class="main-nav"
+        aria-label="Menú principal mobile"
+      >
         <ul>
           <li><a href="#about" class="link">sobre mí</a></li>
           <li><a href="#projects" class="link">mis proyectos</a></li>
@@ -614,6 +620,7 @@
 
     <!-- boton hacia arriba -->
     <button
+      type="button"
       id="goTop"
       class="nav-top-btn"
       aria-label="Navegar al principio de la página"
