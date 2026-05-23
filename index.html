@@ -45,6 +45,18 @@
 
     <!-- seccion cabecera -->
     <header class="container" role="banner">
+      <!-- boton menu mobile -->
+      <button
+        id="openMenu"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-label="Abrir menu principal"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- menu desktop -->
       <nav role="navigation" class="main-nav" aria-label="Navegación principal">
         <ul>
           <li><a href="#about" class="link">sobre mí</a></li>
@@ -53,6 +65,30 @@
         </ul>
       </nav>
     </header>
+    <!-- menu mobile overlay -->
+    <div
+      id="menuOverlay"
+      class="nav-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menu principal"
+    >
+      <button
+        id="closeMenu"
+        class="nav-overlay__close"
+        aria-label="Cerrar menú"
+      >
+        <span></span>
+        <span></span>
+      </button>
+      <nav role="navigation" class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#about" class="link">sobre mí</a></li>
+          <li><a href="#projects" class="link">mis proyectos</a></li>
+          <li><a href="#contact" class="link">contáctame</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- contenido principal -->
     <main id="main-content" class="container" role="main">
@@ -575,5 +611,17 @@
         <p class="fun-fact">// La simplicidad es la máxima sofisticación</p>
       </div>
     </footer>
+
+    <!-- boton hacia arriba -->
+    <button
+      id="goTop"
+      class="nav-top-btn"
+      aria-label="Navegar al principio de la página"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <script src="./js/nav.js" defer></script>
   </body>
 </html>
