@@ -387,6 +387,38 @@ NOTA: cargar siempre despues de main.css
   margin-top: var(--space-xs);
 }
 
+.footer-copy {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  padding: var(--space-md);
+}
+
+.footer-divider {
+  width: 40px;
+  height: 1px;
+  margin-left: var(--space-md);
+  background-color: var(--color-border);
+}
+
+.footer-credits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: var(--space-md);
+}
+
+.footer-credit {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.footer-quote {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+  padding: 0 var(--space-md);
+}
+
 /* * Componentes menu mobile =========================*/
 
 .open-menu-btn {
