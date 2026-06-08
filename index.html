@@ -240,6 +240,106 @@
           </article>
         </div>
       </section>
+      <!-- contacto -->
+      <section
+        id="contact"
+        class="contact-section container"
+        aria-labelledby="contact-title"
+      >
+        <div class="contact-header">
+          <h3 id="contact-title" class="section-title">contacto</h3>
+          <p class="section-description">
+            Ya sea un proyecto nuevo, una consulta técnica o una idea que
+            todavía no tomó forma, hablemos. estoy disponible y con ganas de
+            trabajar.
+          </p>
+          <!-- disponibilidad -->
+          <p class="contact-availability">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Disponible full time — presencial, o remoto
+          </p>
+          <!-- mini cards redes -->
+          <div class="contact-social">
+            <a
+              href="https://www.linkedin.com/in/osvaldo-emanuel-zakowicz"
+              class="social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ver perfil de linkedin"
+            >
+              <i data-feather="linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/OsvaldoZakowicz"
+              class="social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ver perfil de github"
+            >
+              <i data-feather="github"></i>
+              <span>Github</span>
+            </a>
+          </div>
+        </div>
+        <!-- formulario -->
+        <form
+          name="contact"
+          method="POST"
+          action="/success.html"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          id="contact-form"
+          class="contact-form"
+        >
+          <p class="hidden">
+            <label>
+              No completes esto si eres humano:
+              <input name="bot-field" type="text" />
+            </label>
+          </p>
+          <fieldset>
+            <legend class="sr-only">datos de contacto</legend>
+            <div class="field-group">
+              <label for="name">nombre</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                aria-required="true"
+                placeholder="tu nombre"
+              />
+            </div>
+            <div class="field-group">
+              <label for="email">email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-required="true"
+                placeholder="tu@email.com"
+              />
+            </div>
+            <div class="field-group">
+              <label for="message">mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                aria-required="true"
+                placeholder="contame en qué puedo ayudarte"
+              ></textarea>
+            </div>
+          </fieldset>
+          <button type="submit" class="button button-primary">
+            enviar mensaje
+          </button>
+        </form>
+      </section>
     </div>
 
     <!-- boton menu mobile -->

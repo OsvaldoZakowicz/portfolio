@@ -271,6 +271,122 @@ NOTA: cargar siempre despues de main.css
   color: var(--color-text-primary);
 }
 
+/* mini cards sociales */
+.contact-social {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.social-card:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* disponibilidad */
+.contact-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.availability-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  flex-shrink: 0;
+  /* pulso sutil para indicar disponibilidad activa */
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* formulario */
+.contact-form fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field-group label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+.field-group label::after {
+  content: ' *';
+  color: var(--color-accent);
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: var(--text-base);
+  font-family: inherit;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.field-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 300px;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: var(--color-text-muted);
+}
+
+.field-group input:focus-visible,
+.field-group textarea:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.contact-form .button {
+  margin-top: var(--space-xs);
+}
+
 /* * Componentes menu mobile =========================*/
 
 .open-menu-btn {
