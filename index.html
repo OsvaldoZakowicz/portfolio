@@ -143,6 +143,41 @@
           </p>
         </div>
         <div class="projects-grid">
+          <!-- sigepan -->
+          <article class="project-card" aria-labelledby="card-title-sigepan">
+            <div class="card-image">
+              <img src="assets/img/sigepan.png" alt="logo de sigepan" />
+            </div>
+            <div class="card-content">
+              <h4 id="card-title-sigepan" class="card-title">sigepan</h4>
+              <p class="card-description">
+                Sistema de Gestión para Panaderías. Proyecto final para la
+                carrera Analista en sistemas de Computación.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a
+                href="https://github.com/OsvaldoZakowicz/sigepan-unam"
+                class="card-link card-link--primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ver repositorio de sigepan"
+              >
+                <i data-feather="github"></i>
+                repositorio
+              </a>
+              <a
+                href="https://www.youtube.com/playlist?list=PLox7J60odDImzx_YJPqFpY22T_ALTyqXd"
+                class="card-link card-link--secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ver manual de usuario en YouTube"
+              >
+                <i data-feather="youtube"></i>
+                ver
+              </a>
+            </div>
+          </article>
           <!-- devbuddy -->
           <article class="project-card" aria-labelledby="card-title-devbuddy">
             <div class="card-image">
@@ -162,8 +197,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ver repositorio de devbuddy"
-                >repositorio</a
               >
+                <i data-feather="github"></i>
+                repositorio
+              </a>
             </div>
           </article>
           <!-- todolist observer -->
@@ -185,16 +222,20 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ver repositorio de ToDo"
-                >repositorio</a
               >
+                <i data-feather="github"></i>
+                repositorio
+              </a>
               <a
                 href="https://osvaldozakowicz.github.io/todolist-observer/"
                 class="card-link card-link--secondary"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ver demo de ToDo"
-                >demo</a
               >
+                <i data-feather="play"></i>
+                demo
+              </a>
             </div>
           </article>
         </div>
@@ -264,6 +305,12 @@
       <span></span>
     </button>
 
+    <!-- mobile nav -->
     <script src="./js/nav.js" defer></script>
+    <!-- icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

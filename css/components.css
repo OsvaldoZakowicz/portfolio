@@ -238,6 +238,10 @@ NOTA: cargar siempre despues de main.css
 }
 
 .card-link {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
   padding: 0.4rem 1rem;
   font-size: var(--text-sm);
   font-weight: 500;
