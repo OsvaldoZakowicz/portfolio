@@ -64,12 +64,6 @@ ul {
   padding: var(--space-sm);
 }
 
-@media (min-width: 576px) {
-  .container {
-    padding: 1.5rem;
-  }
-}
-
 .header {
   display: none;
 }
@@ -77,6 +71,75 @@ ul {
 .hero {
   grid-row: 1;
   grid-column: 1;
+}
+
+/* hero: zonas apiladas en mobile */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+
+/* zona 1: identidad en columna en mobile */
+.hero-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--space-sm);
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* zona 3: cta */
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-sm);
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.projects-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+
+/*
+================================================
+Ajuste responsivo
+================================================
+*/
+
+@media (min-width: 576px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .hero-cta {
+    flex-direction: row;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 @media (min-width: 768px) {
@@ -124,45 +187,8 @@ ul {
     grid-row: 1;
     grid-column: 2;
   }
-}
 
-/* hero: zonas apiladas en mobile */
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  padding: var(--space-md);
-}
-
-/* zona 1: identidad en columna en mobile */
-.hero-identity {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: var(--space-sm);
-}
-
-.hero-info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-/* zona 3: cta */
-.hero-cta {
-  display: flex;
-  flex-direction: column;
-  margin-top: var(--space-sm);
-}
-
-@media (min-width: 576px) {
-  .hero-cta {
-    flex-direction: row;
-  }
-}
-
-/* desktop: zona 1 en horizontal */
-@media (min-width: 916px) {
+  /* desktop: zona 1 en horizontal */
   .hero-identity {
     flex-direction: row;
     align-items: flex-start;
@@ -171,5 +197,10 @@ ul {
   .hero-info {
     align-items: flex-start;
     text-align: left;
+  }
+
+  .projects-section {
+    grid-row: 2;
+    grid-column: 1 / 3;
   }
 }
