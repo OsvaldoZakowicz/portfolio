@@ -13,8 +13,8 @@ NOTA: cargar siempre despues de main.css
 }
 
 .header-logo img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 
 /* nav desktop */
@@ -24,12 +24,6 @@ NOTA: cargar siempre despues de main.css
   justify-content: flex-end;
   align-items: center;
   gap: var(--space-md);
-}
-
-@media (min-width: 916px) {
-  .main-nav ul {
-    flex-direction: column;
-  }
 }
 
 .link {
@@ -58,8 +52,8 @@ NOTA: cargar siempre despues de main.css
 
 /* avatar */
 .hero-avatar img {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   border: 2px solid var(--color-border);
   object-fit: cover;
@@ -121,7 +115,9 @@ NOTA: cargar siempre despues de main.css
 }
 
 .button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.8rem 2rem;
   font-size: 0.9rem;
   font-weight: 600;
@@ -160,7 +156,7 @@ NOTA: cargar siempre despues de main.css
 }
 
 .section-description {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   line-height: 1.8;
 }
@@ -226,6 +222,25 @@ NOTA: cargar siempre despues de main.css
   color: var(--color-text-muted);
   line-height: 1.7;
   flex: 1;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: var(--space-xs);
+}
+
+.card-tag {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  padding: 0;
+}
+
+.card-tag::before {
+  content: '#';
+  color: var(--color-accent);
+  margin-right: 1px;
 }
 
 .card-actions {
@@ -300,7 +315,7 @@ NOTA: cargar siempre despues de main.css
 /* disponibilidad */
 .contact-availability {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.6rem;
   font-size: var(--text-sm);
   color: var(--color-text-muted);
@@ -343,7 +358,7 @@ NOTA: cargar siempre despues de main.css
 }
 
 .field-group label {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   text-transform: capitalize;
 }
@@ -357,7 +372,7 @@ NOTA: cargar siempre despues de main.css
 .field-group textarea {
   width: 100%;
   padding: 0.6rem 1rem;
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-family: inherit;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
@@ -390,21 +405,14 @@ NOTA: cargar siempre despues de main.css
 .footer-copy {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  padding: var(--space-md);
-}
-
-.footer-divider {
-  width: 40px;
-  height: 1px;
-  margin-left: var(--space-md);
-  background-color: var(--color-border);
+  padding: 0 var(--space-md);
 }
 
 .footer-credits {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  padding: var(--space-md);
+  padding: 0 var(--space-md);
 }
 
 .footer-credit {
@@ -571,6 +579,12 @@ NOTA: cargar siempre despues de main.css
   }
 
   .menu-overlay {
+    display: none;
+  }
+}
+
+@media (min-width: 916px) {
+  .go-top-btn {
     display: none;
   }
 }

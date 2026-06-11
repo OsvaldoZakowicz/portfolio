@@ -62,46 +62,42 @@
       <!-- sobre mi -->
       <main id="main-content" class="hero container" role="main">
         <section id="about" class="hero-section" aria-labelledby="main-title">
-          <!-- zona 1: identidad -->
-          <div class="hero-identity">
-            <div class="hero-avatar">
-              <img
-                src="assets/img/perfil.webp"
-                alt="foto de perfil de Zakowicz Osvaldo"
-                width="150"
-                height="150"
-              />
-            </div>
-            <div class="hero-info">
-              <h1 id="main-title" class="hero-name">
-                zakowicz osvaldo emanuel
-              </h1>
-              <h2 class="hero-profession">
-                analista en sistemas de computación &amp; desarrollador web full
-                stack laravel
-              </h2>
-              <p class="hero-education">
-                Egresado en 2025 de la
-                <a
-                  href="https://www.fceqyn.unam.edu.ar/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link-secondary"
-                  >Facultad de Ciencias Exactas, Químicas y Naturales</a
-                >
-                de la Universidad Nacional de Misiones, Argentina
-              </p>
-            </div>
+          <!-- zona 1: avatar -->
+          <div class="hero-avatar">
+            <img
+              src="assets/img/perfil.webp"
+              alt="foto de perfil de Zakowicz Osvaldo"
+              width="150"
+              height="150"
+            />
           </div>
-
-          <!-- zona 2: propuesta -->
+          <!-- zona 2: info -->
+          <div class="hero-info">
+            <h1 id="main-title" class="hero-name">zakowicz osvaldo emanuel</h1>
+            <h2 class="hero-profession">
+              analista en sistemas de computación &amp; <br />
+              desarrollador web full stack laravel
+            </h2>
+            <p class="hero-education">
+              Egresado en 2025 de la
+              <a
+                href="https://www.fceqyn.unam.edu.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-secondary"
+                >Facultad de Ciencias Exactas, Químicas y Naturales</a
+              >
+              <br />
+              de la Universidad Nacional de Misiones, Argentina
+            </p>
+          </div>
+          <!-- zona 3: propuesta -->
           <div class="hero-proposal">
             <p id="main-description" class="hero-bio">
               En constante crecimiento hacia la especialización en análisis de
               sistemas y desarrollo web full stack. Mi objetivo es crear
               soluciones digitales eficientes que impulsen el crecimiento de
-              empresas y negocios, aplicando buenas prácticas de programación y
-              arquitectura de software limpia.
+              empresas y negocios.
             </p>
             <ul role="list" class="tech-list" aria-label="stack tecnológico">
               <li class="tech-tag">Laravel 12+</li>
@@ -122,9 +118,13 @@
               <li class="tech-tag">Ollama</li>
             </ul>
           </div>
-
-          <!-- zona 3: accion -->
+          <!-- zona 4: redes y accion -->
           <nav aria-label="navegacion rapida" class="hero-cta">
+            <!-- disponibilidad -->
+            <p class="contact-availability">
+              <span class="availability-dot" aria-hidden="true"></span>
+              Disponible full time, presencial o remoto
+            </p>
             <a href="#contact" class="button button-primary">contáctame</a>
           </nav>
         </section>
@@ -154,6 +154,13 @@
                 Sistema de Gestión para Panaderías. Proyecto final para la
                 carrera Analista en sistemas de Computación.
               </p>
+              <ul class="card-tags" aria-label="tecnologias utilizadas">
+                <li class="card-tag">Laravel</li>
+                <li class="card-tag">Livewire</li>
+                <li class="card-tag">TailwindCSS</li>
+                <li class="card-tag">Docker</li>
+                <li class="card-tag">MySQL</li>
+              </ul>
             </div>
             <div class="card-actions">
               <a
@@ -189,6 +196,12 @@
                 Interfaz web minimalista para pair programming con IA,
                 ejecutándose completamente en local mediante Docker y Ollama.
               </p>
+              <ul class="card-tags" aria-label="tecnologias utilizadas">
+                <li class="card-tag">PHP 8+</li>
+                <li class="card-tag">JavaScript ES6+</li>
+                <li class="card-tag">Ollama</li>
+                <li class="card-tag">Docker</li>
+              </ul>
             </div>
             <div class="card-actions">
               <a
@@ -214,6 +227,11 @@
                 ToDo es una aplicación web para gestión eficiente de tareas.
                 Gestión intuitiva y eficiente. JAMstack, rápida y moderna.
               </p>
+              <ul class="card-tags" aria-label="tecnologias utilizadas">
+                <li class="card-tag">HTML5</li>
+                <li class="card-tag">CSS3</li>
+                <li class="card-tag">JavaScript ES6+</li>
+              </ul>
             </div>
             <div class="card-actions">
               <a
@@ -256,7 +274,7 @@
           <!-- disponibilidad -->
           <p class="contact-availability">
             <span class="availability-dot" aria-hidden="true"></span>
-            Disponible full time — presencial, o remoto
+            Disponible full time, presencial o remoto
           </p>
           <!-- mini cards redes -->
           <div class="contact-social">
@@ -340,12 +358,12 @@
           </button>
         </form>
       </section>
+      <!-- pie de pagina -->
       <footer class="site-footer container" role="contentinfo">
         <p class="footer-copy">
           © 2026 Osvaldo Zakowicz — Hecho en Misiones (ARG 🇦🇷) con mate 🧉 y
           buena música.
         </p>
-        <div class="footer-divider"></div>
         <div class="footer-credits">
           <p class="footer-credit">
             Iconos cortesía de
