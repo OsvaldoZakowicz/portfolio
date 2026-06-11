@@ -69,6 +69,12 @@ ul {
 
 .header {
   display: none;
+  background: radial-gradient(
+    ellipse at top right,
+    var(--color-bg-primary) 0%,
+    var(--color-border) 60%,
+    var(--color-accent-hover) 100%
+  );
 }
 
 .hero {
@@ -161,7 +167,12 @@ ul {
   gap: var(--space-xs);
   padding: var(--space-xl) var(--space-sm);
   text-align: left;
-  background-color: var(--color-border);
+  background: radial-gradient(
+    ellipse at top left,
+    var(--color-bg-primary) 0%,
+    var(--color-border) 70%,
+    var(--color-bg-surface) 100%
+  );
   padding-top: var(--space-lg);
 }
 

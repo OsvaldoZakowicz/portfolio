@@ -463,7 +463,12 @@ NOTA: cargar siempre despues de main.css
   z-index: 998;
   width: 100vw;
   height: 50%;
-  background-color: var(--color-bg-surface);
+  background: radial-gradient(
+    ellipse at top right,
+    var(--color-bg-primary) 0%,
+    var(--color-border) 60%,
+    var(--color-accent-hover) 100%
+  );
   border-bottom: 2px solid var(--color-accent);
   display: flex;
   flex-direction: column;
