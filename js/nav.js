@@ -10,7 +10,7 @@ if (!openMenu || !closeMenu || !goTop || !overlay) {
     'nav.js: elementos del dom no encontrados, modulo no inicializado',
   );
 } else {
-  const navLinks = overlay.querySelectorAll('.link');
+  const navLinks = overlay.querySelectorAll('.main-nav--mobile .link');
 
   // funciones de navegacion mobile
   function openNav() {
