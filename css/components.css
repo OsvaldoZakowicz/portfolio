@@ -432,6 +432,46 @@ NOTA: cargar siempre despues de main.css
   padding: 0 var(--space-md);
 }
 
+/* * Componentes paginas de exito y error ============*/
+
+/* icono de estado */
+.status-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-bg-surface);
+}
+
+.status-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.status-card--success .status-icon svg {
+  color: var(--color-accent);
+}
+
+.status-card--error .status-icon svg {
+  color: var(--color-text-primary);
+}
+
+/* textos */
+.status-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: capitalize;
+}
+
+.status-text {
+  font-size: var(--text-base);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
 /* * Componentes menu mobile =========================*/
 
 .open-menu-btn {
