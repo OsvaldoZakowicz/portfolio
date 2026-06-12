@@ -1,0 +1,24 @@
+# configuracion de netlify para sitio estatico (no spa)
+# sin proceso de build, se publica el contenido del repositorio directamente
+
+[build]
+  publish = "."
+
+# cache largo para assets estaticos que no cambian seguido
+# (imagenes, svg, iconos)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# cache corto para css y js, permite revalidar cambios sin esperar
+# el max-age completo
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
