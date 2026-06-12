@@ -31,10 +31,18 @@
 }
 
 /* error messages */
+.error-message:empty {
+  display: none;
+}
+
 .error-message {
-  color: #d32f2f;
-  font-size: 0.875rem;
+  color: #ff8787;
+  font-size: var(--text-sm);
   margin-top: 0.25rem;
+}
+
+.error-message::first-letter {
+  text-transform: uppercase;
 }
 
 .help-text {

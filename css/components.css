@@ -398,6 +398,11 @@ NOTA: cargar siempre despues de main.css
   border-color: var(--color-accent);
 }
 
+.field-group input[aria-invalid='true'],
+.field-group textarea[aria-invalid='true'] {
+  border-color: var(--color-text-primary);
+}
+
 .contact-form .button {
   margin-top: var(--space-xs);
 }

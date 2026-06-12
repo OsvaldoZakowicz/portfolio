@@ -325,10 +325,10 @@
                 id="name"
                 name="name"
                 autocomplete="name"
-                required
                 aria-required="true"
                 placeholder="tu nombre"
               />
+              <span id="name-error" class="error-message" role="alert"></span>
             </div>
             <div class="field-group">
               <label for="email">email</label>
@@ -337,20 +337,24 @@
                 id="email"
                 name="email"
                 autocomplete="email"
-                required
                 aria-required="true"
                 placeholder="tu@email.com"
               />
+              <span id="email-error" class="error-message" role="alert"></span>
             </div>
             <div class="field-group">
               <label for="message">mensaje</label>
               <textarea
                 id="message"
                 name="message"
-                required
                 aria-required="true"
                 placeholder="contame en qué puedo ayudarte"
               ></textarea>
+              <span
+                id="message-error"
+                class="error-message"
+                role="alert"
+              ></span>
             </div>
           </fieldset>
           <button type="submit" class="button button-primary">
@@ -456,6 +460,8 @@
 
     <!-- mobile nav -->
     <script src="./js/nav.js" defer></script>
+    <!-- validaciones form -->
+    <script src="./js/form-validation.js" defer></script>
     <!-- icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
