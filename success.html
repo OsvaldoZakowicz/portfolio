@@ -1,15 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/assets/svg/portfolio-svgrepo-com.svg"
-    />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/svg/oz-logo.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,18 +15,29 @@
     />
 
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/accessibility.css" />
 
-    <title>Mensaje enviado</title>
+    <title>mensaje enviado</title>
   </head>
   <body>
-    <main class="container" role="main">
-      <div class="message">
-        <p class="message-title">¡Gracias por contactarme!</p>
-        <p class="message-text">
-          Tu mensaje ha sido enviado correctamente. Te responderé pronto.
+    <main class="status-page" role="main">
+      <div class="status-card status-card--success">
+        <div class="status-icon">
+          <i data-feather="check-circle" aria-hidden="true"></i>
+        </div>
+        <h1 class="status-title">gracias por contactarme</h1>
+        <p class="status-text">
+          tu mensaje fue enviado correctamente. te responderé a la brevedad.
         </p>
-        <a href="/" class="message-link">Volver al inicio</a>
+        <a href="/" class="button button-primary">volver al inicio</a>
       </div>
     </main>
+
+    <!-- icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

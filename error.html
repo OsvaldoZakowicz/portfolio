@@ -1,15 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/assets/svg/portfolio-svgrepo-com.svg"
-    />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/svg/oz-logo.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,26 +15,37 @@
     />
 
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/accessibility.css" />
 
-    <title>Error al enviar mensaje</title>
+    <title>error al enviar mensaje</title>
   </head>
   <body>
-    <main class="container" role="main">
-      <div class="message">
-        <p class="message-title--alt">¡Epa, algo salió mal!</p>
-        <p class="message-text">
-          Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo
-          más tarde. Tambien puedes contactarme por
+    <main class="status-page" role="main">
+      <div class="status-card status-card--error">
+        <div class="status-icon">
+          <i data-feather="alert-circle" aria-hidden="true"></i>
+        </div>
+        <h1 class="status-title">epa, algo salió mal</h1>
+        <p class="status-text">
+          hubo un problema al enviar tu mensaje. por favor, intentalo de nuevo
+          más tarde, o escribime directo por
           <a
-            href="http://www.linkedin.com/in/osvaldo-emanuel-zakowicz"
-            class="message-link--alt"
+            href="https://www.linkedin.com/in/osvaldo-emanuel-zakowicz"
+            class="link-secondary"
             target="_blank"
             rel="noopener noreferrer"
-            >LinkedIn</a
-          >
+            >linkedin</a
+          >.
         </p>
-        <a href="/" class="message-link">Volver al inicio</a>
+        <a href="/" class="button button-primary">volver al inicio</a>
       </div>
     </main>
+
+    <!-- icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
