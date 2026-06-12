@@ -432,7 +432,7 @@ NOTA: cargar siempre despues de main.css
   padding: 0 var(--space-md);
 }
 
-/* * Componentes paginas de exito y error ============*/
+/* * Componentes paginas de exito, error y 404 ============*/
 
 /* icono de estado */
 .status-icon {
@@ -470,6 +470,10 @@ NOTA: cargar siempre despues de main.css
   font-size: var(--text-base);
   line-height: 1.8;
   color: var(--color-text-muted);
+}
+
+.status-card--404 .status-icon svg {
+  color: var(--color-accent);
 }
 
 /* * Componentes menu mobile =========================*/
