@@ -286,6 +286,152 @@ NOTA: cargar siempre despues de main.css
   color: var(--color-text-primary);
 }
 
+/* achievement card tipo toast */
+.achievement-card {
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: linear-gradient(
+    to right,
+    rgba(106, 158, 127, 0.08) 0%,
+    var(--color-bg-primary) 100%
+  );
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 4px;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.achievement-card:hover {
+  border-color: var(--color-accent);
+  border-left-color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+.achievement-card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+}
+
+.achievement-card__icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-accent);
+}
+
+.achievement-card__body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.achievement-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: var(--space-sm);
+}
+
+.achievement-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: capitalize;
+}
+
+.achievement-description {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.achievement-year {
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* boton ver: solo icono */
+.achievement-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: end;
+  align-self: flex-end;
+  margin-top: auto;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.achievement-link svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-muted);
+}
+
+.achievement-link:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+}
+
+.achievement-link:hover svg {
+  color: var(--color-bg-primary);
+}
+
+/* boton cerrar overlay, mismo patron que close-menu-btn */
+.achievement-overlay__close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 42px;
+  height: 36px;
+  padding: 0.5rem;
+  background: var(--color-bg-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.achievement-overlay__close span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--color-text-primary);
+}
+
+.achievement-overlay__close span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.achievement-overlay__close span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 /* mini cards sociales */
 .contact-social {
   display: flex;
