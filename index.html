@@ -51,6 +51,7 @@
           <ul>
             <li><a href="#about" class="link">sobre mí</a></li>
             <li><a href="#projects" class="link">mis proyectos</a></li>
+            <li><a href="#achievements" class="link">logros</a></li>
             <li><a href="#contact" class="link">contáctame</a></li>
           </ul>
         </nav>
@@ -137,8 +138,10 @@
         <div class="projects-header">
           <h3 id="projects-title" class="section-title">mis proyectos</h3>
           <p class="section-description">
-            cada proyecto es una decisión de arquitectura. aquí algunos de los
-            problemas que elegí resolver y cómo los resolví.
+            Proyectos donde pongo en práctica lo que aprendo y sigo mejorando.
+            Algunos nacieron como trabajo final de carrera, otros para
+            profundizar tecnologías clave de mi stack, y algunos simplemente por
+            curiosidad y ganas de construir algo.
           </p>
         </div>
         <div class="projects-grid">
@@ -269,6 +272,76 @@
           </article>
         </div>
       </section>
+      <!-- logros -->
+      <section
+        id="achievements"
+        class="achievements-section container"
+        aria-labelledby="achievements-title"
+      >
+        <div class="achievements-header">
+          <h3 id="achievements-title" class="section-title">
+            logros y certificaciones
+          </h3>
+          <p class="section-description">
+            Formación que respalda lo que hago. Cada certificado es un paso más
+            en el camino.
+          </p>
+        </div>
+        <div class="achievements-grid">
+          <!-- titulo ASC -->
+          <article class="achievement-card">
+            <div class="achievement-card__icon">
+              <i data-feather="award" aria-hidden="true"></i>
+            </div>
+            <div class="achievement-card__body">
+              <div class="achievement-card__header">
+                <h4 class="achievement-title">
+                  Analista en Sistemas de Computación
+                </h4>
+                <span class="achievement-year">2025</span>
+              </div>
+              <p class="achievement-description">
+                Título universitario otorgado por la Facultad de Ciencias
+                Exactas, Químicas y Naturales, UNaM.
+              </p>
+              <button
+                type="button"
+                class="achievement-link"
+                data-achievement="title-analista"
+                aria-label="ver titulo de analista en sistemas"
+              >
+                <i data-feather="eye" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+          <!-- dev IA -->
+          <article class="achievement-card">
+            <div class="achievement-card__icon">
+              <i data-feather="award" aria-hidden="true"></i>
+            </div>
+            <div class="achievement-card__body">
+              <div class="achievement-card__header">
+                <h4 class="achievement-title">
+                  Desarrollo con IA: de 0 a Producción
+                </h4>
+                <span class="achievement-year">2026</span>
+              </div>
+              <p class="achievement-description">
+                Certificado de iniciación al desarrollo con IA, otorgado por Big
+                School.
+              </p>
+              <button
+                type="button"
+                class="achievement-link"
+                data-achievement="cert-ia"
+                aria-label="ver titulo de analista en sistemas"
+              >
+                <i data-feather="eye" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
       <!-- contacto -->
       <section
         id="contact"
@@ -279,7 +352,7 @@
           <h3 id="contact-title" class="section-title">contacto</h3>
           <p class="section-description">
             Ya sea un proyecto nuevo, una consulta técnica o una idea que
-            todavía no tomó forma, hablemos. estoy disponible y con ganas de
+            todavía no tomó forma, hablemos. Estoy disponible y con ganas de
             trabajar.
           </p>
           <!-- disponibilidad -->
@@ -453,6 +526,7 @@
         <ul>
           <li><a href="#about" class="link">sobre mí</a></li>
           <li><a href="#projects" class="link">mis proyectos</a></li>
+          <li><a href="#achievements" class="link">logros</a></li>
           <li><a href="#contact" class="link">contáctame</a></li>
         </ul>
       </nav>
@@ -469,10 +543,34 @@
       <span></span>
     </button>
 
+    <!-- overlay de visualizacion de certificados -->
+    <div
+      id="achievementOverlay"
+      class="achievement-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="visualizacion de certificado"
+    >
+      <button
+        type="button"
+        id="closeAchievementOverlay"
+        class="achievement-overlay__close"
+        aria-label="cerrar visualizacion"
+      >
+        <span></span>
+        <span></span>
+      </button>
+      <div class="achievement-overlay__content">
+        <img id="achievementOverlayImg" src="" alt="" />
+      </div>
+    </div>
+
     <!-- mobile nav -->
     <script src="./js/nav.js" defer></script>
     <!-- validaciones form -->
     <script src="./js/form-validation.js" defer></script>
+    <!-- carga de logros -->
+    <script src="./js/achievements.js" defer></script>
     <!-- icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
