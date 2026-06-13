@@ -1,12 +1,12 @@
 // referencias del dom
 const achievementOverlay = document.querySelector('#achievementOverlay');
-const overlayImg = document.querySelector('#achievementOverlayImg');
+const overlayContent = document.querySelector('.achievement-overlay__content');
 const closeBtn = document.querySelector('#closeAchievementOverlay');
 const thumbs = document.querySelectorAll('.achievement-thumb');
 const links = document.querySelectorAll('.achievement-link');
 
 // guard: si faltan elementos criticos, el modulo no se inicializa
-if (!achievementOverlay || !overlayImg || !closeBtn) {
+if (!achievementOverlay || !overlayContent || !closeBtn) {
   console.warn(
     'achievements.js: elementos del dom no encontrados, modulo no inicializado',
   );
@@ -27,20 +27,21 @@ if (!achievementOverlay || !overlayImg || !closeBtn) {
   // abre el overlay y carga la imagen correspondiente al logro
   function openOverlay(achievementKey) {
     const achievement = achievementsData[achievementKey];
-    if (!achievement) {
-      return;
-    }
+    if (!achievement) return;
 
-    overlayImg.src = achievement.src;
-    overlayImg.alt = achievement.alt;
+    const img = document.createElement('img');
+    img.src = achievement.src;
+    img.alt = achievement.alt;
+
+    overlayContent.appendChild(img);
     achievementOverlay.classList.add('is-open');
   }
 
   // cierra el overlay y limpia la imagen cargada
   function closeOverlay() {
     achievementOverlay.classList.remove('is-open');
-    overlayImg.src = '';
-    overlayImg.alt = '';
+    // limpia la imagen creada dinamicamente
+    overlayContent.innerHTML = '';
   }
 
   // listeners de apertura: tanto la miniatura como el boton ver
