@@ -1,26 +1,33 @@
 :root {
-  /* fondos */
-  --color-bg-primary: #1c1c1e;
-  --color-bg-surface: #2a2a2d;
+  /* fondos planos en tonos azul marino profundo */
+  --color-bg-primary: #111622;
+  --color-bg-surface: #192132;
+  --color-bg-elevated: #212c42;
 
-  /* acento */
-  --color-accent: #6a9e7f;
-  --color-accent-hover: #578a6b;
+  /* acento azul inspirado en el sueter (calibrado para contraste accesible) */
+  --color-accent: #3b71ca;
+  --color-accent-hover: #2b579a;
+  --color-accent-soft: #6ea0f0;
 
   /* texto */
-  --color-text-primary: #f0ede8;
-  --color-text-muted: #a0a0a0;
+  --color-text-primary: #f1f5f9;
+  --color-text-muted: #94a3b8;
 
   /* bordes y sombras */
-  --color-border: #3a3a3d;
-  --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-border: #2a3752;
+  --color-shadow: rgba(6, 10, 19, 0.5);
+
+  /* tipografias */
+  --font-heading:
+    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* escala tipografica fluida */
-  --text-sm: clamp(0.8rem, 1.5vw, 0.9rem);
-  --text-base: clamp(0.9rem, 2vw, 1rem);
-  --text-md: clamp(1rem, 2.5vw, 1.2rem);
-  --text-lg: clamp(1.2rem, 3vw, 1.5rem);
-  --text-xl: clamp(1.5rem, 4vw, 2.2rem);
+  --text-sm: clamp(0.82rem, 1.5vw, 0.9rem);
+  --text-base: clamp(0.95rem, 2vw, 1.02rem);
+  --text-md: clamp(1.05rem, 2.5vw, 1.25rem);
+  --text-lg: clamp(1.3rem, 3vw, 1.65rem);
+  --text-xl: clamp(1.65rem, 4vw, 2.35rem);
 
   /* escala de espaciado fluido */
   --space-xs: clamp(0.5rem, 1vw, 0.8rem);
@@ -34,20 +41,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.button,
+.link,
+.logo-placeholder {
+  font-family: var(--font-heading);
 }
 
 ul {
   list-style: none;
-  list-style-type: none;
-  list-style-position: inside;
 }
 
-/* especifico para ocultar elementos */
 .hidden {
   display: none;
 }
@@ -67,14 +87,10 @@ ul {
   padding: var(--space-sm);
 }
 
+/* header plano sin gradientes */
 .header {
   display: none;
-  background: radial-gradient(
-    ellipse at top right,
-    var(--color-bg-primary) 0%,
-    var(--color-border) 60%,
-    var(--color-accent-hover) 100%
-  );
+  background-color: var(--color-bg-surface);
 }
 
 .hero {
@@ -96,15 +112,13 @@ ul {
   gap: var(--space-md);
 }
 
-/* zona 1: identidad en columna en mobile */
 .hero-info {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
 }
 
-/* zona 3: cta */
 .hero-cta {
   display: flex;
   flex-direction: column;
@@ -116,8 +130,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  /* ajuste debido al header sticky */
-  /* de esta forma al navegar por anclas el header no tapa el titulo de seccion */
   padding-top: 90px;
 }
 
@@ -166,7 +178,7 @@ ul {
   justify-content: center;
   align-items: center;
   padding: var(--space-md);
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(11, 15, 25, 0.88);
   opacity: 0;
   visibility: hidden;
   transition:
@@ -188,7 +200,7 @@ ul {
   max-width: 100%;
   max-height: 90vh;
   object-fit: contain;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid var(--color-border);
 }
 
@@ -196,8 +208,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  /* ajuste debido al header sticky */
-  /* de esta forma al navegar por anclas el header no tapa el titulo de seccion */
   padding-top: 90px;
   padding-bottom: 120px;
 }
@@ -219,24 +229,21 @@ ul {
   flex-direction: column;
   gap: var(--space-xs);
   padding: var(--space-md);
-  background-color: var(--color-border);
-  border-radius: 4px;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
 }
 
+/* footer plano sin gradientes */
 .site-footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-xs);
-  padding: var(--space-xl) var(--space-sm);
+  padding: var(--space-lg) var(--space-sm) var(--space-xl);
   text-align: left;
-  background: radial-gradient(
-    ellipse at top left,
-    var(--color-bg-primary) 0%,
-    var(--color-border) 70%,
-    var(--color-bg-surface) 100%
-  );
-  padding-top: var(--space-lg);
+  background-color: var(--color-bg-primary);
+  border-top: 1px solid var(--color-border);
 }
 
 /*
@@ -245,7 +252,6 @@ Paginas de exito y error
 ================================================
 */
 
-/* paginas de estado: exito y error */
 .status-page {
   min-height: 100vh;
   display: flex;
@@ -264,13 +270,8 @@ Paginas de exito y error
   max-width: 480px;
   padding: var(--space-lg);
   border: 1px solid var(--color-border);
-  border-radius: 4px;
-  background: radial-gradient(
-    ellipse at top right,
-    var(--color-bg-primary) 0%,
-    var(--color-border) 60%,
-    var(--color-accent-hover) 100%
-  );
+  border-radius: 8px;
+  background-color: var(--color-bg-surface);
 }
 
 /*
@@ -288,7 +289,6 @@ Ajuste responsivo
   }
 }
 
-/* especifico para imagen + info en hero */
 @media (max-width: 767px) and (orientation: landscape) {
   .hero-identity-row {
     flex-direction: row;
@@ -302,7 +302,7 @@ Ajuste responsivo
 
 @media (min-width: 768px) {
   .layout {
-    grid-template-rows: 90px auto;
+    grid-template-rows: 84px auto;
   }
 
   .header {
@@ -311,7 +311,7 @@ Ajuste responsivo
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-    height: 90px;
+    height: 84px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -325,7 +325,7 @@ Ajuste responsivo
 
   .hero-section {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3.5fr;
     grid-template-rows: auto;
     gap: var(--space-md);
   }
@@ -375,7 +375,7 @@ Ajuste responsivo
     grid-row: 1;
     padding: var(--space-md);
     border: 1px solid var(--color-border);
-    border-radius: 4px;
+    border-radius: 8px;
   }
 
   .contact-form {

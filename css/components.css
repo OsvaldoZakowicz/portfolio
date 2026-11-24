@@ -6,15 +6,33 @@ NOTA: cargar siempre despues de main.css
 
 /* * Componentes atomicos ============================*/
 
-/* logo header */
+/* logo header placeholder */
 .header-logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
-.header-logo img {
-  width: 50px;
-  height: 50px;
+.logo-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-bg-primary);
+  border: 2px solid var(--color-accent);
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.header-logo:hover .logo-placeholder {
+  background-color: var(--color-accent);
 }
 
 /* nav desktop */
@@ -28,7 +46,8 @@ NOTA: cargar siempre despues de main.css
 
 .link {
   font-size: var(--text-sm);
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
   transition: color 0.2s ease;
   text-decoration: none;
   text-transform: uppercase;
@@ -36,33 +55,57 @@ NOTA: cargar siempre despues de main.css
 }
 
 .link:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-soft);
 }
 
 .link-secondary {
-  color: var(--color-accent);
+  color: var(--color-accent-soft);
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .link-secondary:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-text-primary);
   text-decoration: underline;
+}
+
+/* avatar placeholder */
+.avatar-placeholder {
+  width: 156px;
+  height: 156px;
+  border-radius: 50%;
+  background-color: var(--color-bg-elevated);
+  border: 2px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-muted);
+}
+
+.avatar-placeholder svg {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
 }
 
 /* avatar */
 .hero-avatar img {
-  width: 170px;
-  height: 170px;
+  width: 186px;
+  height: 186px;
   border-radius: 50%;
   border: 2px solid var(--color-border);
+  background-color: var(--color-bg-elevated);
   object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 /* textos zona 1 */
 .hero-name {
   font-size: var(--text-xl);
   font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--color-text-primary);
   text-transform: capitalize;
 }
@@ -70,39 +113,41 @@ NOTA: cargar siempre despues de main.css
 .hero-profession {
   font-size: var(--text-md);
   font-weight: 500;
-  color: var(--color-accent);
+  color: var(--color-accent-soft);
   text-transform: capitalize;
 }
 
 .hero-education {
   font-size: var(--text-sm);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--color-text-muted);
+  line-height: 1.6;
 }
 
 /* zona 2 */
 .hero-bio {
   font-size: var(--text-base);
-  line-height: 2;
+  line-height: 1.85;
   color: var(--color-text-primary);
-  border-left: 2px solid var(--color-accent);
-  padding-left: 0.8rem;
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
 }
 
 .tech-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 /* tech tag */
 .tech-tag {
-  padding: 0.3rem 0.7rem;
+  padding: 0.35rem 0.75rem;
   font-size: var(--text-sm);
+  font-weight: 500;
   background-color: var(--color-bg-primary);
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 6px;
   color: var(--color-text-muted);
   transition:
     border-color 0.2s ease,
@@ -111,21 +156,21 @@ NOTA: cargar siempre despues de main.css
 
 .tech-tag:hover {
   border-color: var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-text-primary);
 }
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem 2rem;
-  font-size: 0.9rem;
+  padding: 0.8rem 1.75rem;
+  font-size: 0.88rem;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   border: 2px solid transparent;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -133,41 +178,38 @@ NOTA: cargar siempre despues de main.css
 .button-primary {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
-  color: var(--color-bg-primary);
+  color: #ffffff;
 }
 
 .button-primary:hover {
-  background-color: transparent;
-  color: var(--color-accent);
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: #ffffff;
 }
 
-/* titulos de seccion */
+/* titulos de seccion limpios (sin prefijo de terminal) */
 .section-title {
   font-size: var(--text-lg);
   font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--color-text-primary);
   text-transform: capitalize;
-}
-
-.section-title::before {
-  content: '> ';
-  color: var(--color-accent);
-  font-weight: 700;
 }
 
 .section-description {
   font-size: var(--text-base);
   color: var(--color-text-muted);
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 /* card */
 .project-card {
   display: flex;
   flex-direction: column;
+  height: 550px;
   background-color: var(--color-bg-primary);
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   transition:
     border-color 0.2s ease,
@@ -179,17 +221,21 @@ NOTA: cargar siempre despues de main.css
   transform: translateY(-4px);
 }
 
+/* 40% de la altura de la card */
 .card-image {
+  flex: 0 0 40%;
   width: 100%;
-  height: 180px;
+  min-height: 0;
   overflow: hidden;
-  background-color: var(--color-bg-surface);
+  background-color: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -197,12 +243,36 @@ NOTA: cargar siempre despues de main.css
   transform: scale(1.05);
 }
 
+.card-image--placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-muted);
+}
+
+.card-image--placeholder svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 1.5;
+  opacity: 0.65;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.project-card:hover .card-image--placeholder svg {
+  transform: scale(1.08);
+  color: var(--color-accent-soft);
+}
+
+/* contenedor del 60% restante (cuerpo + acciones) */
 .card-content {
+  flex: 1 1 60%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
   padding: var(--space-sm);
-  flex: 1;
 }
 
 .card-title {
@@ -212,68 +282,71 @@ NOTA: cargar siempre despues de main.css
   text-transform: capitalize;
 }
 
-.card-title::before {
-  content: '> ';
-  color: var(--color-accent);
-}
-
 .card-description {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.65;
   flex: 1;
+  overflow-y: auto; /* evita desbordes si alguna descripcion es muy larga */
 }
 
 .card-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.5rem;
   margin-top: var(--space-xs);
 }
 
 .card-tag {
   color: var(--color-text-muted);
-  font-size: 0.75rem;
-  padding: 0;
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 
 .card-tag::before {
   content: '#';
-  color: var(--color-accent);
+  color: var(--color-accent-soft);
   margin-right: 1px;
 }
 
 .card-actions {
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-xs);
   padding: var(--space-sm);
-  margin-top: var(--space-xs);
+  border-top: 1px solid var(--color-border);
 }
 
 .card-link {
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 5px;
-  padding: 0.4rem 1rem;
-  font-size: var(--text-sm);
-  font-weight: 500;
+  gap: 6px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 4px;
+  letter-spacing: 0.4px;
+  border-radius: 6px;
   transition: all 0.2s ease;
 }
 
+.card-link svg {
+  width: 15px;
+  height: 15px;
+}
+
 .card-link--primary {
-  color: var(--color-accent);
+  color: var(--color-accent-soft);
   border: 1px solid var(--color-accent);
 }
 
 .card-link--primary:hover {
   background-color: var(--color-accent);
-  color: var(--color-bg-primary);
+  color: #ffffff;
 }
 
 .card-link--secondary {
@@ -286,7 +359,7 @@ NOTA: cargar siempre despues de main.css
   color: var(--color-text-primary);
 }
 
-/* achievement card tipo toast */
+/* achievement card plana (sin gradiente) */
 .achievement-card {
   min-height: 80px;
   display: flex;
@@ -294,14 +367,10 @@ NOTA: cargar siempre despues de main.css
   align-items: start;
   gap: var(--space-sm);
   padding: var(--space-sm) var(--space-md);
-  background: linear-gradient(
-    to right,
-    rgba(106, 158, 127, 0.08) 0%,
-    var(--color-bg-primary) 100%
-  );
+  background-color: var(--color-bg-primary);
   border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-accent);
-  border-radius: 4px;
+  border-radius: 8px;
   transition:
     border-color 0.2s ease,
     transform 0.2s ease;
@@ -309,7 +378,6 @@ NOTA: cargar siempre despues de main.css
 
 .achievement-card:hover {
   border-color: var(--color-accent);
-  border-left-color: var(--color-accent);
   transform: translateX(4px);
 }
 
@@ -321,22 +389,22 @@ NOTA: cargar siempre despues de main.css
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background-color: var(--color-bg-surface);
+  border-radius: 8px;
+  background-color: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
 }
 
 .achievement-card__icon svg {
   width: 18px;
   height: 18px;
-  color: var(--color-accent);
+  color: var(--color-accent-soft);
 }
 
 .achievement-card__body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.35rem;
   flex: 1;
 }
 
@@ -357,22 +425,21 @@ NOTA: cargar siempre despues de main.css
 .achievement-description {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .achievement-year {
   font-size: var(--text-sm);
-  color: var(--color-accent);
-  font-weight: 700;
+  color: var(--color-accent-soft);
+  font-weight: 600;
   flex-shrink: 0;
 }
 
-/* boton ver: solo icono */
+/* boton ver certificado */
 .achievement-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-self: end;
   align-self: flex-end;
   margin-top: auto;
   flex-shrink: 0;
@@ -380,7 +447,7 @@ NOTA: cargar siempre despues de main.css
   height: 36px;
   background: transparent;
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -397,10 +464,10 @@ NOTA: cargar siempre despues de main.css
 }
 
 .achievement-link:hover svg {
-  color: var(--color-bg-primary);
+  color: #ffffff;
 }
 
-/* boton cerrar overlay, mismo patron que close-menu-btn */
+/* boton cerrar overlay */
 .achievement-overlay__close {
   position: absolute;
   top: var(--space-md);
@@ -409,14 +476,14 @@ NOTA: cargar siempre despues de main.css
   height: 36px;
   padding: 0.5rem;
   background: var(--color-bg-surface);
-  border: 2px solid var(--color-border);
-  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
   cursor: pointer;
 }
 
 .achievement-overlay__close span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   position: absolute;
   top: 50%;
@@ -435,33 +502,40 @@ NOTA: cargar siempre despues de main.css
 /* mini cards sociales */
 .contact-social {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-sm);
 }
 
 .social-card {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
+  gap: 0.55rem;
+  padding: 0.65rem 1.2rem;
   font-size: var(--text-sm);
+  font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-text-muted);
   background-color: var(--color-bg-primary);
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 6px;
   transition: all 0.2s ease;
+}
+
+.social-card svg {
+  width: 16px;
+  height: 16px;
 }
 
 .social-card:hover {
   border-color: var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-text-primary);
 }
 
 /* disponibilidad */
 .contact-availability {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.6rem;
   font-size: var(--text-sm);
   color: var(--color-text-muted);
@@ -472,9 +546,8 @@ NOTA: cargar siempre despues de main.css
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-soft);
   flex-shrink: 0;
-  /* pulso sutil para indicar disponibilidad activa */
   animation: pulse 2s ease infinite;
 }
 
@@ -500,30 +573,31 @@ NOTA: cargar siempre despues de main.css
 .field-group {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .field-group label {
-  font-size: var(--text-base);
-  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-primary);
   text-transform: capitalize;
 }
 
 .field-group label::after {
   content: ' *';
-  color: var(--color-accent);
+  color: var(--color-accent-soft);
 }
 
 .field-group input,
 .field-group textarea {
   width: 100%;
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1rem;
   font-size: var(--text-sm);
   font-family: inherit;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 6px;
   outline: none;
   transition: border-color 0.2s ease;
 }
@@ -536,7 +610,7 @@ NOTA: cargar siempre despues de main.css
 
 .field-group input:focus,
 .field-group textarea:focus {
-  border-color: var(--color-text-muted);
+  border-color: var(--color-accent-soft);
 }
 
 .field-group input:focus-visible,
@@ -546,7 +620,7 @@ NOTA: cargar siempre despues de main.css
 
 .field-group input[aria-invalid='true'],
 .field-group textarea[aria-invalid='true'] {
-  border-color: var(--color-text-primary);
+  border-color: #ff8787;
 }
 
 .contact-form .button {
@@ -580,7 +654,6 @@ NOTA: cargar siempre despues de main.css
 
 /* * Componentes paginas de exito, error y 404 ============*/
 
-/* icono de estado */
 .status-icon {
   display: flex;
   justify-content: center;
@@ -588,23 +661,24 @@ NOTA: cargar siempre despues de main.css
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: var(--color-bg-surface);
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
 }
 
 .status-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 }
 
-.status-card--success .status-icon svg {
-  color: var(--color-accent);
+.status-card--success .status-icon svg,
+.status-card--404 .status-icon svg {
+  color: var(--color-accent-soft);
 }
 
 .status-card--error .status-icon svg {
-  color: var(--color-text-primary);
+  color: #ff8787;
 }
 
-/* textos */
 .status-title {
   font-size: var(--text-lg);
   font-weight: 700;
@@ -614,15 +688,11 @@ NOTA: cargar siempre despues de main.css
 
 .status-text {
   font-size: var(--text-base);
-  line-height: 1.8;
+  line-height: 1.75;
   color: var(--color-text-muted);
 }
 
-.status-card--404 .status-icon svg {
-  color: var(--color-accent);
-}
-
-/* * Componentes menu mobile =========================*/
+/* * Componentes menu mobile off-canvas (35% viewport) =====*/
 
 .open-menu-btn {
   position: fixed;
@@ -635,90 +705,106 @@ NOTA: cargar siempre despues de main.css
   align-items: center;
   gap: 5px;
   width: 42px;
-  height: 36px;
+  height: 38px;
   padding: 0.5rem;
-  background: var(--color-bg-surface);
-  border: 2px solid var(--color-border);
-  border-radius: 4px;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
   cursor: pointer;
 }
 
 .open-menu-btn span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background-color: var(--color-text-primary);
-  /* la transicion la usaremos despues para animar */
   transition: all 0.3s ease;
 }
 
-.menu-overlay {
+/* backdrop oscuro al abrir el off-canvas */
+.menu-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 998;
-  width: 100vw;
-  height: 50%;
-  background: radial-gradient(
-    ellipse at top right,
-    var(--color-bg-primary) 0%,
-    var(--color-border) 60%,
-    var(--color-accent-hover) 100%
-  );
-  border-bottom: 2px solid var(--color-accent);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  transform: translateY(-100%);
-  transition: transform 0.3s ease;
+  z-index: 997;
+  background-color: rgba(11, 15, 25, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
-  .menu-overlay {
-    height: 100%;
-  }
+.menu-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* panel off-canvas lateral derecho del 35% del viewport */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  width: 35vw;
+  min-width: 175px;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  border-left: 1px solid var(--color-border);
+  box-shadow: -8px 0 24px var(--color-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-overlay.is-open {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .menu-overlay__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .main-nav--mobile {
-  padding: 1rem;
+  width: 100%;
+  padding: 1.5rem 1.1rem;
 }
 
 .main-nav--mobile ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
-/* close button class */
+.main-nav--mobile .link {
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+}
+
 .close-menu-btn {
   position: relative;
-  width: 42px;
+  width: 38px;
   height: 36px;
   padding: 0.5rem;
-  background: transparent;
-  border: 2px solid var(--color-border);
-  border-radius: 0;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
   cursor: pointer;
 }
 
 .close-menu-btn span {
   display: block;
-  width: 24px;
+  width: 20px;
   height: 2px;
   position: absolute;
   top: 50%;
@@ -740,16 +826,15 @@ NOTA: cargar siempre despues de main.css
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
-  background: var(--color-bg-surface);
-  border: 2px solid var(--color-border);
-  border-radius: 100%;
-  aspect-ratio: 1;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
   cursor: pointer;
-  /* estado oculto: abajo fuera de vista */
   transform: translateY(200px);
   transition: transform 0.3s ease;
 }
@@ -760,25 +845,23 @@ NOTA: cargar siempre despues de main.css
 
 .go-top-btn span {
   display: block;
-  width: 12px;
+  width: 11px;
   height: 2px;
   background-color: var(--color-text-primary);
 }
 
 .go-top-btn span:first-child {
-  transform: rotate(-45deg) translateX(3px);
+  transform: rotate(-45deg) translateX(2.5px);
 }
 
 .go-top-btn span:last-child {
-  transform: rotate(45deg) translateX(-3px);
+  transform: rotate(45deg) translateX(-2.5px);
 }
 
 @media (min-width: 768px) {
-  .open-menu-btn {
-    display: none;
-  }
-
-  .menu-overlay {
+  .open-menu-btn,
+  .menu-overlay,
+  .menu-backdrop {
     display: none;
   }
 }

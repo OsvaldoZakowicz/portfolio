@@ -3,6 +3,7 @@ const openMenu = document.querySelector('#openMenu');
 const closeMenu = document.querySelector('#closeMenu');
 const goTop = document.querySelector('#goTop');
 const overlay = document.querySelector('#menuOverlay');
+const backdrop = document.querySelector('#menuBackdrop');
 
 // guard: si faltan elementos criticos, el modulo no se inicializa
 if (!openMenu || !closeMenu || !goTop || !overlay) {
@@ -12,15 +13,19 @@ if (!openMenu || !closeMenu || !goTop || !overlay) {
 } else {
   const navLinks = overlay.querySelectorAll('.main-nav--mobile .link');
 
-  // funciones de navegacion mobile
+  // funciones de navegacion mobile off-canvas
   function openNav() {
     overlay.classList.add('is-open');
+    if (backdrop) backdrop.classList.add('is-open');
     openMenu.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
   }
 
   function closeNav() {
     overlay.classList.remove('is-open');
+    if (backdrop) backdrop.classList.remove('is-open');
     openMenu.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
   }
 
   // funciones del boton ir arriba
@@ -36,12 +41,15 @@ if (!openMenu || !closeMenu || !goTop || !overlay) {
   openMenu.addEventListener('click', openNav);
   closeMenu.addEventListener('click', closeNav);
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeNav();
-  });
+  if (backdrop) {
+    backdrop.addEventListener('click', closeNav);
+  }
 
-  document.addEventListener('click', (e) => {
-    if (e.target === overlay) closeNav();
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+      closeNav();
+      openMenu.focus();
+    }
   });
 
   navLinks.forEach((link) => {
