@@ -20,12 +20,13 @@
     <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/svg/oz-logo.svg" />
+    <link rel="icon" type="image/x-icon" href="/assets/svg/oz-logo-2.svg" />
 
+    <!-- Tipografia profesional (Analista en Sistemas) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -40,12 +41,7 @@
       <!-- menu desktop -->
       <header class="header container" role="banner">
         <a href="#main-content" class="header-logo" aria-label="Inicio">
-          <img
-            src="/assets/svg/oz-logo.svg"
-            alt="logo OZ"
-            width="40"
-            height="40"
-          />
+          <span class="logo-placeholder">OZ</span>
         </a>
         <nav role="navigation" class="main-nav" aria-label="Menú desktop">
           <ul>
@@ -56,41 +52,40 @@
           </ul>
         </nav>
       </header>
+
       <!-- sobre mi -->
       <main id="main-content" class="hero container" role="main">
         <section id="about" class="hero-section" aria-labelledby="main-title">
-          <div class="hero-identity-row">
-            <!-- zona 1: avatar -->
-            <div class="hero-avatar">
-              <img
-                src="assets/img/perfil.webp"
-                alt="foto de perfil de Zakowicz Osvaldo"
-                width="150"
-                height="150"
-              />
-            </div>
-            <!-- zona 2: info -->
-            <div class="hero-info">
-              <h1 id="main-title" class="hero-name">
-                zakowicz osvaldo emanuel
-              </h1>
-              <h2 class="hero-profession">
-                analista en sistemas de computación &amp; desarrollador web full
-                stack laravel
-              </h2>
-              <p class="hero-education">
-                Egresado en 2025 de la
-                <a
-                  href="https://www.fceqyn.unam.edu.ar/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link-secondary"
-                  >Facultad de Ciencias Exactas, Químicas y Naturales</a
-                >
-                de la Universidad Nacional de Misiones, Argentina
-              </p>
-            </div>
+          <!-- zona 1: avatar placeholder -->
+          <div class="hero-avatar">
+            <img
+              src="assets/img/perfil-2.webp"
+              alt="Foto de perfil de Zakowicz Osvaldo Emanuel"
+              width="156"
+              height="156"
+            />
           </div>
+
+          <!-- zona 2: info -->
+          <div class="hero-info">
+            <h1 id="main-title" class="hero-name">zakowicz osvaldo emanuel</h1>
+            <h2 class="hero-profession">
+              analista en sistemas de computación &amp; desarrollador web full
+              stack laravel
+            </h2>
+            <p class="hero-education">
+              Egresado en 2025 de la
+              <a
+                href="https://www.fceqyn.unam.edu.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-secondary"
+                >Facultad de Ciencias Exactas, Químicas y Naturales</a
+              >
+              de la Universidad Nacional de Misiones, Argentina
+            </p>
+          </div>
+
           <!-- zona 3: propuesta -->
           <div class="hero-proposal">
             <p id="main-description" class="hero-bio">
@@ -110,17 +105,15 @@
               <li class="tech-tag">CSS3</li>
               <li class="tech-tag">Tailwindcss 3+</li>
               <li class="tech-tag">SO linux</li>
-              <li class="tech-tag" title="lenguaje de modelado unificado">
-                UML
-              </li>
               <li class="tech-tag">ChatGPT IA</li>
               <li class="tech-tag">Claude IA</li>
               <li class="tech-tag">Ollama</li>
+              <li class="tech-tag">Opencode</li>
             </ul>
           </div>
+
           <!-- zona 4: redes y accion -->
           <nav aria-label="navegacion rapida" class="hero-cta">
-            <!-- disponibilidad -->
             <p class="contact-availability">
               <span class="availability-dot" aria-hidden="true"></span>
               Disponible full time, presencial o remoto
@@ -129,6 +122,7 @@
           </nav>
         </section>
       </main>
+
       <!-- proyectos -->
       <section
         id="projects"
@@ -148,7 +142,7 @@
           <!-- sigepan -->
           <article class="project-card" aria-labelledby="card-title-sigepan">
             <div class="card-image">
-              <img src="assets/img/sigepan.png" alt="logo de sigepan" />
+              <img src="assets/img/sigepan.png" alt="Logo de Sigepan" />
             </div>
             <div class="card-content">
               <h4 id="card-title-sigepan" class="card-title">sigepan</h4>
@@ -191,10 +185,11 @@
               </a>
             </div>
           </article>
+
           <!-- devbuddy -->
           <article class="project-card" aria-labelledby="card-title-devbuddy">
             <div class="card-image">
-              <img src="assets/img/devbuddy.png" alt="logo de devbuddy" />
+              <img src="assets/img/devbuddy.png" alt="Logo de Devbuddy" />
             </div>
             <div class="card-content">
               <h4 id="card-title-devbuddy" class="card-title">devbuddy</h4>
@@ -226,10 +221,11 @@
               </a>
             </div>
           </article>
+
           <!-- todolist observer -->
           <article class="project-card" aria-labelledby="card-title-todo">
             <div class="card-image">
-              <img src="assets/img/todo.png" alt="logo de todo" />
+              <img src="assets/img/todo.png" alt="Logo de ToDo" />
             </div>
             <div class="card-content">
               <h4 id="card-title-todo" class="card-title">ToDo</h4>
@@ -272,6 +268,7 @@
           </article>
         </div>
       </section>
+
       <!-- logros -->
       <section
         id="achievements"
@@ -314,6 +311,7 @@
               </button>
             </div>
           </article>
+
           <!-- dev IA -->
           <article class="achievement-card">
             <div class="achievement-card__icon">
@@ -334,7 +332,7 @@
                 type="button"
                 class="achievement-link"
                 data-achievement="cert-ia"
-                aria-label="ver titulo de analista en sistemas"
+                aria-label="ver certificado de desarrollo con ia"
               >
                 <i data-feather="eye" aria-hidden="true"></i>
               </button>
@@ -342,6 +340,7 @@
           </article>
         </div>
       </section>
+
       <!-- contacto -->
       <section
         id="contact"
@@ -384,6 +383,7 @@
             </a>
           </div>
         </div>
+
         <!-- formulario -->
         <form
           name="contact"
@@ -446,6 +446,7 @@
           </button>
         </form>
       </section>
+
       <!-- pie de pagina -->
       <footer class="site-footer container" role="contentinfo">
         <p class="footer-copy">
@@ -485,6 +486,7 @@
       id="openMenu"
       class="open-menu-btn"
       aria-expanded="false"
+      aria-controls="menuOverlay"
       aria-label="Abrir menu principal"
     >
       <span></span>
@@ -492,8 +494,11 @@
       <span></span>
     </button>
 
-    <!-- menu mobile overlay -->
-    <div
+    <!-- telon de fondo para off-canvas mobile -->
+    <div id="menuBackdrop" class="menu-backdrop" aria-hidden="true"></div>
+
+    <!-- menu mobile off-canvas (35% viewport) -->
+    <aside
       id="menuOverlay"
       class="menu-overlay"
       role="dialog"
@@ -501,13 +506,6 @@
       aria-label="Menu principal"
     >
       <div class="menu-overlay__header">
-        <img
-          src="/assets/svg/oz-logo.svg"
-          alt="logo OZ"
-          width="50"
-          height="50"
-          aria-hidden="true"
-        />
         <button
           type="button"
           id="closeMenu"
@@ -530,7 +528,7 @@
           <li><a href="#contact" class="link">contáctame</a></li>
         </ul>
       </nav>
-    </div>
+    </aside>
 
     <!-- boton hacia arriba -->
     <button
